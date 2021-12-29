@@ -1,0 +1,55 @@
+<script>
+	// --- Changing specific text in element with specific ID on a page ---
+	function replacer(elementId, oldText, newText) {
+		    setTimeout(function () {
+		        var header = document.getElementById(elementId);
+		        if (!header) { return replacer(elementId, oldText, newText); }
+		        if (header.textContent.toLowerCase() === oldText.toLowerCase()) {
+		            header.textContent = newText;
+		        }
+		    }, 50);
+		}
+		replacer('coverage-selection-container.call-me-back', "ontvang een offerte", "Ontdek je offerte");
+
+
+// --------------------------------------
+
+	//the old header you want to find
+	var textToCheck = "Verwarring over dagrijlichten en dimlichten op je auto: wat is het verschil en hoe gebruik je die?";
+
+	//the new header you want to replace the old with
+	var newHeader = "HELLO";
+
+
+	// --- Find & changing text element in many items with a specific class on a page ---
+
+	function replaceHeader(textToCheck,classOfHeader){
+	var headers = document.getElementsByClassName(classOfHeader);
+		for (var i = 0, len = headers.length; i < len; ++i) {
+
+		    if(headers[i].innerHTML.indexOf(textToCheck) !== -1) {
+		        headers[i].innerHTML= newHeader;
+		        console.log(headers[i].innerHTML);
+		    }
+		}
+	}
+
+	// check if text is in a specific class via xpath (native browser)  + checks if text is already in this class before running the loop.
+	var xpath = "//h2/span[text()='" + textToCheck + "']";
+	var result = document.evaluate(xpath,
+	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+	var node = result.singleNodeValue;
+	var classOfHeader = node.className;
+	if (node) {
+	  replaceHeader(textToCheck,classOfHeader);
+	  console.log(classOfHeader);
+	} else {
+	  console.error("Not found!");
+	}
+
+	
+
+ 
+
+
+</script>
