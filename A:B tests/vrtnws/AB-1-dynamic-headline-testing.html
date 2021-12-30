@@ -35,16 +35,27 @@
 	}
 
 	// check if text is in a specific class via xpath (native browser)  + checks if text is already in this class before running the loop.
-	var xpath = "//h2/span[text()='" + textToCheck + "']";
+	var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
 	var result = document.evaluate(xpath,
 	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
 	var node = result.singleNodeValue;
-	var classOfHeader = node.className;
 	if (node) {
-	  replaceHeader(textToCheck,classOfHeader);
-	  console.log(classOfHeader);
+		var classOfHeader = node.className;
+		replaceHeader(textToCheck,classOfHeader);
+		console.log(classOfHeader);
 	} else {
-	  console.error("Not found!");
+	  	console.error("Not found! Not overview page");
+	  	var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
+		var result = document.evaluate(xpath,
+	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+		var node = result.singleNodeValue;
+		if (node) {
+			var classOfHeader = node.className;
+	  		replaceHeader(textToCheck,classOfHeader);
+	  		console.log(classOfHeader);
+			} else {
+			console.error("Not found! Also not article");
+		}
 	}
 
 	
