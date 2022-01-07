@@ -1,0 +1,13 @@
+<script>
+	// --- Changing specific text in element with specific ID on a page ---
+	function replacer(elementId, oldText, newText) {
+		    setTimeout(function () {
+		        var header = document.getElementById(elementId);
+		        if (!header) { return replacer(elementId, oldText, newText); }
+		        if (header.textContent.toLowerCase() === oldText.toLowerCase()) {
+		            header.textContent = newText;
+		        }
+		    }, 50);
+		}
+		replacer('coverage-selection-container.call-me-back', "ontvang een offerte", "Ontdek je offerte");
+</script>

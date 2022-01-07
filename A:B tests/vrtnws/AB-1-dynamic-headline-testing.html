@@ -44,7 +44,7 @@
 		replaceHeader(textToCheck,classOfHeader);
 		console.log(classOfHeader);
 	} else {
-	  	console.error("Not found! Not overview page");
+	  	console.error("Not found! Not overview page vrtNWS");
 	  	var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
 		var result = document.evaluate(xpath,
 	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
@@ -54,13 +54,8 @@
 	  		replaceHeader(textToCheck,classOfHeader);
 	  		console.log(classOfHeader);
 			} else {
-			console.error("Not found! Also not article");
+			console.error("Not found! Also not article page vrtNWS");
 		}
 	}
-
-	
-
  
-
-
 </script>
