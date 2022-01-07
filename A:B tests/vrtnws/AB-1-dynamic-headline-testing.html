@@ -1,61 +1,82 @@
 <script>
-	// --- Changing specific text in element with specific ID on a page ---
-	function replacer(elementId, oldText, newText) {
-		    setTimeout(function () {
-		        var header = document.getElementById(elementId);
-		        if (!header) { return replacer(elementId, oldText, newText); }
-		        if (header.textContent.toLowerCase() === oldText.toLowerCase()) {
-		            header.textContent = newText;
-		        }
-		    }, 50);
+	// --------------------------------------
+	
+		//the old header you want to find
+		var textToCheck = "Elektrische en hybride auto breken door, samen even populair als diesel met dank aan bedrijfswagen";
+	
+		//the new header you want to replace the old with
+		var newHeader = "Elektrische en hybride auto breken door, met dank aan bedrijfswagen";
+	
+	
+		// --- Find & changing text element in many items with a specific class on a page ---//debug : to fast
+	
+		function replaceHeader(textToCheck,classOfHeader){
+		var headers = document.getElementsByClassName(classOfHeader);
+			for (var i = 0, len = headers.length; i < len; ++i) {
+				if(headers[i].innerHTML.indexOf(textToCheck) !== -1) {
+					headers[i].innerHTML= newHeader;
+					console.log(headers[i].innerHTML);
+				}
+			}
 		}
-		replacer('coverage-selection-container.call-me-back', "ontvang een offerte", "Ontdek je offerte");
-
-
-// --------------------------------------
-
-	//the old header you want to find
-	var textToCheck = "Verwarring over dagrijlichten en dimlichten op je auto: wat is het verschil en hoe gebruik je die?";
-
-	//the new header you want to replace the old with
-	var newHeader = "HELLO";
-
-
-	// --- Find & changing text element in many items with a specific class on a page ---
-
-	function replaceHeader(textToCheck,classOfHeader){
-	var headers = document.getElementsByClassName(classOfHeader);
-		for (var i = 0, len = headers.length; i < len; ++i) {
-
-		    if(headers[i].innerHTML.indexOf(textToCheck) !== -1) {
-		        headers[i].innerHTML= newHeader;
-		        console.log(headers[i].innerHTML);
-		    }
-		}
-	}
-
-	// check if text is in a specific class via xpath (native browser)  + checks if text is already in this class before running the loop.
-	var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
-	var result = document.evaluate(xpath,
-	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
-	var node = result.singleNodeValue;
-	if (node) {
-		var classOfHeader = node.className;
-		replaceHeader(textToCheck,classOfHeader);
-		console.log(classOfHeader);
-	} else {
-	  	console.error("Not found! Not overview page vrtNWS");
-	  	var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
+		// remark: if we first do tile then if in article there is a tile with link to same article : article title not changed!
+		// check if text is in a specific class via xpath (native browser)  + checks if text is already in this class before running the loop.
+		function checkClass(){
+		var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
 		var result = document.evaluate(xpath,
-	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+		document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
 		var node = result.singleNodeValue;
 		if (node) {
 			var classOfHeader = node.className;
-	  		replaceHeader(textToCheck,classOfHeader);
-	  		console.log(classOfHeader);
-			} else {
-			console.error("Not found! Also not article page vrtNWS");
+			replaceHeader(textToCheck,classOfHeader);
+			console.log(classOfHeader);
+		} else {
+			console.error("Not found! Not article page vrtNWS");
+			var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
+			var result = document.evaluate(xpath,
+			document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+			var node = result.singleNodeValue;
+			if (node) {
+				var classOfHeader = node.className;
+				replaceHeader(textToCheck,classOfHeader);
+				console.log(classOfHeader);
+				} else {
+				console.error("Not found! Not overview page vrtNWS");
+			}
 		}
 	}
- 
-</script>
+	checkClass(); 
+    setTimeout(checkClass, 1000); // to fast for very long page of vrtNWS , bottom items not loaded yet. 'as they are below fold, lazyLoad principle, retry after 500ms' + ook tiles op articles werken terug.
+	</script>
+	
+	
+	<!-- THIS SCRIPTED failed to change H1 on article if there was a tile linking to the same article again ( eg.: most read swimlane on the article page) -->
+	<!-- var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
+		var result = document.evaluate(xpath,
+			document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+		var node = result.singleNodeValue;
+		if (node) {
+			var classOfHeader = node.className;
+			replaceHeader(textToCheck,classOfHeader);
+			console.log(classOfHeader);
+		} else {
+			  console.error("Not found! Not overview page vrtNWS");
+			  var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
+			var result = document.evaluate(xpath,
+			document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+			var node = result.singleNodeValue;
+			if (node) {
+				var classOfHeader = node.className;
+				  replaceHeader(textToCheck,classOfHeader);
+				  console.log(classOfHeader);
+				} else {
+				console.error("Not found! Not article page vrtNWS");
+			}
+		} -->
+	
+	
+	
+	
+	
+	
+	
