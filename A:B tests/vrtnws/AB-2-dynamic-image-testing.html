@@ -1,38 +1,28 @@
 <script>
-// --------------------------------------
-
-	//the old header you want to find
-	var textToCheck = "Elektrische en hybride auto breken door, samen even populair als diesel met dank aan bedrijfswagen";
-
-	//the new header you want to replace the old with
-	var newHeader = "Elektrische en hybride auto breken door, met dank aan bedrijfswagen";
-
-
-	// --- Find & changing text element in many items with a specific class on a page ---
-
-	function replaceHeader(textToCheck,classOfHeader){
-	var headers = document.getElementsByClassName(classOfHeader);
-		for (var i = 0, len = headers.length; i < len; ++i) {
-
-		    if(headers[i].innerHTML.indexOf(textToCheck) !== -1) {
-		        headers[i].innerHTML= newHeader;
-		        console.log(headers[i].innerHTML);
-		    }
+	// --------dynamic headline testing------------------------------
+	
+		//the old header you want to find
+		var textToCheck = "Elektrische en hybride auto breken door, samen even populair als diesel met dank aan bedrijfswagen";
+	
+		//the new header you want to replace the old with
+		var newHeader = "Elektrische en hybride auto breken door, met dank aan bedrijfswagen";
+	
+	
+		// --- Find & changing text element in many items with a specific class on a page ---//debug : to fast
+	
+		function replaceHeader(textToCheck,classOfHeader){
+		var headers = document.getElementsByClassName(classOfHeader);
+			for (var i = 0, len = headers.length; i < len; ++i) {
+				if(headers[i].innerHTML.indexOf(textToCheck) !== -1) {
+					headers[i].innerHTML= newHeader;
+					console.log(headers[i].innerHTML);
+				}
+			}
 		}
-	}
-	// remark: if we first do tile then if in article tehre is a tile with link to same article : article title not changed!
-	// check if text is in a specific class via xpath (native browser)  + checks if text is already in this class before running the loop.
-	var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
-	var result = document.evaluate(xpath,
-	document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
-	var node = result.singleNodeValue;
-	if (node) {
-		var classOfHeader = node.className;
-		replaceHeader(textToCheck,classOfHeader);
-		console.log(classOfHeader);
-	} else {
-		console.error("Not found! Not article page vrtNWS");
-		var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
+		// remark: if we first do tile then if in article there is a tile with link to same article : article title not changed!
+		// check if text is in a specific class via xpath (native browser)  + checks if text is already in this class before running the loop.
+		function checkClass(){
+		var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
 		var result = document.evaluate(xpath,
 		document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
 		var node = result.singleNodeValue;
@@ -40,37 +30,65 @@
 			var classOfHeader = node.className;
 			replaceHeader(textToCheck,classOfHeader);
 			console.log(classOfHeader);
-			} else {
-			console.error("Not found! Not overview page vrtNWS");
+		} else {
+			console.error("Not found! Not article page vrtNWS");
+			var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
+			var result = document.evaluate(xpath,
+			document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
+			var node = result.singleNodeValue;
+			if (node) {
+				var classOfHeader = node.className;
+				replaceHeader(textToCheck,classOfHeader);
+				console.log(classOfHeader);
+				} else {
+				console.error("Not found! Not overview page vrtNWS");
+			}
 		}
 	}
-</script>
+	checkClass(); 
+    setTimeout(checkClass, 1000); // to fast for very long page of vrtNWS , bottom items not loaded yet. 'as they are below fold, lazyLoad principle, retry after 1000ms' + ook self referencing tiles op articles werken terug.
 
 
-<!-- THIS SCRIPTED failed to change H1 on article if there was a tile linking to the same article again ( eg.: most read swimlane on the article page) -->
-<!-- var xpath = "//h2/span[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS home & category pages
-	var result = document.evaluate(xpath,
-	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
-	var node = result.singleNodeValue;
-	if (node) {
-		var classOfHeader = node.className;
-		replaceHeader(textToCheck,classOfHeader);
-		console.log(classOfHeader);
-	} else {
-	  	console.error("Not found! Not overview page vrtNWS");
-	  	var xpath = "//h1[text()='" + textToCheck + "']"; //this is the xpath for vrtNWS article pages
-		var result = document.evaluate(xpath,
-	    document, null, XPathResult.FIRST_ORDERED_NODE_TYPE);
-		var node = result.singleNodeValue;
-		if (node) {
-			var classOfHeader = node.className;
-	  		replaceHeader(textToCheck,classOfHeader);
-	  		console.log(classOfHeader);
-			} else {
-			console.error("Not found! Not article page vrtNWS");
+// --------------DYNAMIC IMAGE TESTING------------------------
+
+// what if editors could upload a B image in the CMS (default not loaded or display none, but a JS parameter could fetch or display block could show it?)
+
+	//the article we want to change image for (via url)
+	var articleName = "/vrtnws/nl/2022/01/07/coronablog-7-januari-2022/";
+
+	//the new image path
+	var newImage = "//images.vrt.be/width960/2022/01/07/f51d1f74-6fab-11ec-b07d-02b7b76bf47f.jpg";
+
+	//nodes with this url
+	var articleLinks = document.querySelectorAll("a[href='" + articleName + "']");
+
+	// //check if they have img
+	// var articleImg = articleLinks[0].lastElementChild.firstElementChild.firstElementChild;
+
+	for (var i = 0, len = articleLinks.length; i < len; ++i) {
+		//check if they have img
+		var articleImg = articleLinks[i].lastElementChild.firstElementChild.firstElementChild;
+				if(articleImg[i].nodeName = 'IMG'){
+					articleImg[i].srcset = newImage;
+					articleImg[i].src = newImage;
+					console.log(1);
+				}
 		}
-	} -->
 
+	if (articleImg.nodeName = 'IMG'){
+		console.log('jup');
+		articleImg.srcset = newImage;
+		articleImg.src = newImage;
+	}
+
+//*[@id="main-content"]//a/article/figure
+document.getElementById("myImg").src = "hackanm.gif";
+<img data-sizes="auto" data-parent-fit="width" src="//images.vrt.be/width960/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg" data-srcset="//images.vrt.be/width1280/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 1280w,//images.vrt.be/width960/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 960w,//images.vrt.be/width640/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 640w,//images.vrt.be/width320/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 320w,//images.vrt.be/width160/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 160w" data-src="//images.vrt.be/width960/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg" alt="" class="image  image--focal-mm   lazyautosizes lazyloaded" onerror="if(this.parentNode) { this.parentNode.classList.add('image--error');this.parentNode.classList.remove('image--loading'); }" onload="if(this.parentNode) { this.parentNode.classList.remove('image--loading'); }" sizes="223px" srcset="//images.vrt.be/width1280/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 1280w,//images.vrt.be/width960/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 960w,//images.vrt.be/width640/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 640w,//images.vrt.be/width320/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 320w,//images.vrt.be/width160/2021/12/03/5d0eb06b-543b-11ec-b07d-02b7b76bf47f.jpg 160w">
+
+
+
+
+</script>
 
 
 
