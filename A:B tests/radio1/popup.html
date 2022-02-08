@@ -1,0 +1,35 @@
+<script>
+const timeoutValue = 2000;
+console.log("start");
+setTimeout(function() {
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://interactief.radio1.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=Rb6x3K_RGXsiUa7tSK2lkg&d=interactief.radio1.be';
+    head_ID.appendChild(script_element);
+    console.log("start " + (timeoutValue/1000) + "sec");
+}, timeoutValue);
+</script>
+
+<script>console.log('start schuman popup');</script>
+<script src="https://interactief.radio1.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=Rb6x3K_RGXsiUa7tSK2lkg&d=interactief.radio1.be" async></script>
+
+<script src="https://interactief.radio1.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=Rb6x3K_RGXsiUa7tSK2lkg&d=interactief.radio1.be"></script>
+
+https://images.vrt.be/orig/2022/02/04/68dafb99-85d6-11ec-b07d-02b7b76bf47f.png
+
+
+<script>
+(function() {
+    console.log("start AB popup schuman");
+    if (document.location.href.indexOf("#schuman") == -1){ console.log('bevat geen #schuman');
+	document.location.href = document.location.href+'#schuman';
+	console.log(document.location.href);
+	};
+})();
+</script>
+<script src="https://interactief.radio1.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=Rb6x3K_RGXsiUa7tSK2lkg&d=interactief.radio1.be"></script>

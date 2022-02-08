@@ -1,0 +1,40 @@
+<script>
+(function() {
+    console.log("start AB popup sporza");
+    if (document.location.href.indexOf("#android") == -1){ console.log('bevat geen #android');
+	document.location.href = document.location.href+'#android';
+	console.log(document.location.href);
+	};
+})();
+</script>
+
+<script>
+console.log("start");
+setTimeout(function() {
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://interactief.sporza.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=uUd8FdLyx4Fn6KBOPtLXpQ&d=interactief.sporza.be';
+    head_ID.appendChild(script_element);
+    console.log("start + 3 sec");
+}, 3000);
+</script>
+
+setTimeout(function() {
+    // Get the head tag
+    var head_ID = document.getElementsByTagName("head")[0]; 
+    // Create script element       
+    var script_element = document.createElement('script');
+    // Set the script type to JavaScript
+    script_element.type = 'text/javascript';
+    // External JS file
+    script_element.src = 'https://interactief.sporza.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=uUd8FdLyx4Fn6KBOPtLXpQ&d=interactief.sporza.be';
+    head_ID.appendChild(script_element);
+}, 3000);
+
+<script src="https://interactief.sporza.be/v1/loader/script?c=1Yndupi-695pLRi_ESfm6Q&s=uUd8FdLyx4Fn6KBOPtLXpQ&d=interactief.sporza.be">
+</script>
