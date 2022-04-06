@@ -4,7 +4,7 @@ function onEdit() {
   var current = start.getActiveCell()
   
   // var to refer to the worksheets
-  var main = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("VRT NU");
+  var main = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("vrtNU");
   var list = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sources");
   
   // which medeium has the user selected (based on active cell if column number is 4)?
@@ -13,7 +13,7 @@ function onEdit() {
   //copy the selected medium from any (utm) file  
     var medium = current.getValue()
   //into the sources file as a dynamic indirect generator
-    list.getRange(2,14).setValue(medium)
+    list.getRange(2,12).setValue(medium)
       
   //clear any validation
   main.getRange(2,2,22).clearDataValidations()
