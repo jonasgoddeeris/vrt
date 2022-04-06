@@ -19,10 +19,11 @@ function onEdit() {
   main.getRange(2,2,22).clearDataValidations()
     
     
-    // point sets the indirect validation to the cell right to it.
+    // set the indirect validation to the cell right to it.
     var point = current.offset(0,1)
-    var items = list.getRange(1,8,53)
-    var rule = SpreadsheetApp.newDataValidation().requireValueInRange(items,true).build();
+    //get the values in the indrect column of the "Sources" sheet, get values H2 to H50. (H = the 11 colomn)
+    var sources = list.getRange(2,11,50)
+    var rule = SpreadsheetApp.newDataValidation().requireValueInRange(sources,true).build();
     
     // clear content
     point.clearContent();
