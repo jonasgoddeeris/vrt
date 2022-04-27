@@ -10,7 +10,7 @@
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -26,6 +26,8 @@
     border-color: var(--brand-color-background);
     border-top: none;
     border-bottom: none;
+    margin: 35px auto;
+    padding: 5px;
 }
 
 /* The Close Button */
@@ -81,7 +83,7 @@
         </nui-newsletter>
     </div><!-- end canvas -->
   </div> 
-</div> 
+</div>
 
 <script>
 // Get the modal
@@ -131,4 +133,246 @@ window.onclick = function(event) {
 // -----hoe zorgen we ervoor dat mensen die al ingeschreven zijn voor specifieke nieuwsbrief deze popup niet zien ? 
 </script>
 
+
+<!-- CURRENT STYLE SHEET -->
+<!-- <style>
+
+.nui-newsletter-signup {
+    max-width: 1920px;
+    margin: 20px auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #5cfc70;
+    border-bottom: 1px solid #5cfc70;
+    justify-content: space-evenly
+}
+
+.nui-newsletter-signup h2,.nui-newsletter-signup h3 {
+    line-height: 1.75rem
+}
+
+.nui-newsletter-signup h2 {
+    font-family: Forma Nuova!important;
+    font-size: 1.5rem;
+    line-height: 1.33;
+    letter-spacing: .048em;
+    padding-right: 1rem
+}
+
+@media (max-width: 1000px) {
+    .nui-newsletter-signup h2 {
+        margin-bottom:.25em
+    }
+}
+
+.nui-newsletter-signup h3 {
+    font-family: Poppins!important;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: .048em;
+    color: #5cfc70
+}
+
+.nui-newsletter-signup form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    gap: 1em
+}
+
+.nui-newsletter-signup form .fieldset,.nui-newsletter-signup form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-grid;
+    grid-template-rows: auto auto
+}
+
+.nui-newsletter-signup form .fieldset label,.nui-newsletter-signup form fieldset label {
+    grid-row: 1
+}
+
+.nui-newsletter-signup form .fieldset input,.nui-newsletter-signup form fieldset input {
+    grid-row: 2
+}
+
+@media (max-width: 600px) {
+    .nui-newsletter-signup form .fieldset,.nui-newsletter-signup form fieldset {
+        width:100%;
+        padding: 0 0 1em
+    }
+}
+
+.nui-newsletter-signup form .fieldset.fieldset-inline,.nui-newsletter-signup form fieldset.fieldset-inline {
+    display: inline-block
+}
+
+.nui-newsletter-signup form input,.nui-newsletter-signup form label {
+    display: block;
+    width: 100%
+}
+
+.nui-newsletter-signup form label {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    display: block
+}
+
+.nui-newsletter-signup form input {
+    padding: 1em;
+    background: transparent;
+    border: 1px solid #a8d2d0;
+    color: #fff;
+    font-size: 1em;
+    height: 3em
+}
+
+.nui-newsletter-signup form input[type=submit] {
+    grid-column: 1/span 2;
+    text-transform: uppercase;
+    border: 1px solid #5cfc70;
+    transition: background-color .2s,color .2s;
+    cursor: pointer;
+    color: #5cfc70;
+    background-color: #000
+}
+
+.nui-newsletter-signup form input[type=submit]:hover:not(:disabled) {
+    background-color: #5cfc70!important;
+    color: #000!important
+}
+
+@media (max-width: 600px) {
+    .nui-newsletter-signup form input[type=submit] {
+        margin-bottom:1em
+    }
+}
+
+.nui-newsletter-signup form input:focus {
+    border: 1px solid #5cfc70
+}
+
+.nui-newsletter-signup form input:focus+label {
+    color: #5cfc70
+}
+
+.nui-newsletter-signup form input:focus:invalid {
+    border: 1px solid red
+}
+
+.nui-newsletter-signup form input::-webkit-input-placeholder {
+    font-style: italic
+}
+
+.nui-newsletter-signup form input:-moz-placeholder,.nui-newsletter-signup form input::-moz-placeholder {
+    font-style: italic
+}
+
+.nui-newsletter-signup form input:-ms-input-placeholder {
+    font-style: italic
+}
+
+.nui-newsletter-signup form input:placeholder-shown {
+    font-style: italic
+}
+
+.nui-newsletter-signup form input[type=checkbox]+label {
+    overflow: initial;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    color: #5cfc70
+}
+
+.nui-newsletter-signup form p {
+    grid-column: 1/span 2;
+    max-width: 640px
+}
+
+.nui-newsletter-signup form p small {
+    color: #a8d2d0;
+    font-size: .8em
+}
+
+.nui-newsletter-signup form p a {
+    text-decoration: underline
+}
+
+@media (max-width: 600px) {
+    .nui-newsletter-signup form {
+        display:block
+    }
+}
+
+.nui-newsletter-signup form #name {
+    grid-column: 1
+}
+
+.nui-newsletter-signup form #email {
+    grid-column: 2
+}
+
+.nui-newsletter-signup form #branded-newsletter {
+    grid-column: 1/-1
+}
+
+@media (min-width: 1000px) {
+    .nui-newsletter-signup>div {
+        min-width:30%
+    }
+}
+
+.nui-newsletter-signup .social-follow {
+    margin-top: 32px
+}
+
+.nui-newsletter-signup .social-follow p {
+    display: flex;
+    align-items: center
+}
+
+.nui-newsletter-signup .social-follow p span {
+    display: contents
+}
+
+.nui-newsletter-signup .social-follow p a {
+    width: 2.5rem;
+    height: 2rem;
+    display: inline-block;
+    background-size: contain;
+    transition: transform .1s
+}
+
+.nui-newsletter-signup .social-follow p a:hover {
+    transform: scale(1.15)
+}
+
+.nui-newsletter-signup.subscribed {
+    animation: nui-newsletter-subscribed .4s 1s;
+    animation-fill-mode: forwards;
+    overflow: hidden
+}
+
+@media (max-width: 1000px) {
+    .nui-newsletter-signup {
+        display:block
+    }
+
+    .nui-newsletter-signup form {
+        margin-top: 1em
+    }
+}
+
+[class*=aem-Author] .nui-newsletter-signup[style*=display] {
+    display: block!important
+}
+
+@media (min-width: 1000px) {
+    [class*=aem-Author] .nui-newsletter-signup[style*=display] {
+        display:flex!important
+    }
+}
+</style> -->
 
