@@ -16,19 +16,22 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  /*background-color: #fefefe;*/
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid var(--brand-color-background);
   width: 80%;
+}
+
+.modal-content .nui-newsletter-signup {
+    border-color: var(--brand-color-background);
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: var(--brand-color-background);
   float: right;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 2em;
 }
 
 .close:hover,
@@ -44,6 +47,8 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    
+    <!-- start canvas -->
     <div class="newsletter-signup"><nui-newsletter class="nui-newsletter-signup" brand="canvas">
 
   <div>
@@ -75,9 +80,10 @@
 
 </nui-newsletter>
 </div>
-  </div>
+    <!-- end canvas -->
 
-</div>
+  </div> <!-- modal content close -->
+</div> <!-- myModal close -->
 
 <script>
 // Get the modal
