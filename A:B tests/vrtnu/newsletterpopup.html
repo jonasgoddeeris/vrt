@@ -25,6 +25,7 @@
 .modal-content .nui-newsletter-signup {
     border-color: var(--brand-color-background);
     border-top: none;
+    border-bottom: none;
 }
 
 /* The Close Button */
@@ -43,9 +44,15 @@
 .nui-newsletter-signup .ab15 { /* overschrijft de min widht zodat formulier velden leesbaar zouden zijn */
     min-width: none;
 }
-.nui-newsletter-signup .ab15 form {
+.nui-newsletter-signup .ab15form {
     min-width: 50%;
 }
+/*.nui-newsletter-signup .ab15 h3 {
+    font-size: 0.9rem;
+}
+.nui-newsletter-signup .ab15 h2 {
+    font-size: 1.3rem;
+}*/
 </style>
 <div id="myModal" class="modal">
 
@@ -59,7 +66,7 @@
             <h2>Bij Canvas is er altijd iets te ontdekken: van topfictie tot straffe documentaires.</h2>
             <h3>Schrijf je in op de Canvas-nieuwsbrief!</h3>
           </div>
-          <form>
+          <form class="ab15form">
             <div id="name" class="fieldset">
               <input type="text" id="nui-newsletter-signup-name" placeholder="Jouw voornaam" name="name" required="">
               <label for="nui-newsletter-signup-name">Voornaam</label>
