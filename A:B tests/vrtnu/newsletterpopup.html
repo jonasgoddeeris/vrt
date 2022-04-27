@@ -16,7 +16,7 @@
 
 /* Modal Content */
 .modal-content {
-  /*background-color: #fefefe;*/
+  background-color: #1a1c24;
   margin: auto;
   padding: 20px;
   border: 1px solid var(--brand-color-background);
@@ -40,6 +40,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+.nui-newsletter-signup .ab15 { /* overschrijft de min widht zodat formulier velden leesbaar zouden zijn */
+    max-width: 50%;
+}
 </style>
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -51,18 +54,9 @@
     <!-- start canvas -->
     <div class="newsletter-signup"><nui-newsletter class="nui-newsletter-signup" brand="canvas">
 
-  <div>
-    <h2>Bij Canvas is er altijd iets te ontdekken: van topfictie tot straffe documentaires en scherpe info. Check onze nieuwsbrief voor de beste tips uit ons grootse aanbod.</h2>
-    <h3>Schrijf je in op onze Canvas-nieuwsbrief!</h3>
-
-    <section class="social-follow">
-      <p>Volg Canvas ook via
-        <a id="facebook" data-icon="facebook" href="https://www.facebook.com/canvas.tv" target="_blank" rel="noopener noreferrer" title="(opent in een nieuw tabblad)"></a>
-        <a id="twitter" data-icon="twitter" href="https://www.twitter.com/canvastv" target="_blank" rel="noopener noreferrer" title="(opent in een nieuw tabblad)"></a>
-        <a id="instagram" data-icon="instagram" href="https://www.instagram.com/canvas_tv" target="_blank" rel="noopener noreferrer" title="(opent in een nieuw tabblad)"></a>
-        
-      </p>
-    </section>
+  <div class="ab15">
+    <h2>Bij Canvas is er altijd iets te ontdekken: van topfictie tot straffe documentaires.</h2>
+    <h3>Schrijf je in op de Canvas-nieuwsbrief!</h3>
   </div>
 
   <form>
