@@ -38,3 +38,93 @@
   cursor: pointer;
 }
 </style>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="newsletter-signup"><nui-newsletter class="nui-newsletter-signup" brand="canvas">
+
+  <div>
+    <h2>Bij Canvas is er altijd iets te ontdekken: van topfictie tot straffe documentaires en scherpe info. Check onze nieuwsbrief voor de beste tips uit ons grootse aanbod.</h2>
+    <h3>Schrijf je in op onze Canvas-nieuwsbrief!</h3>
+
+    <section class="social-follow">
+      <p>Volg Canvas ook via
+        <a id="facebook" data-icon="facebook" href="https://www.facebook.com/canvas.tv" target="_blank" rel="noopener noreferrer" title="(opent in een nieuw tabblad)"></a>
+        <a id="twitter" data-icon="twitter" href="https://www.twitter.com/canvastv" target="_blank" rel="noopener noreferrer" title="(opent in een nieuw tabblad)"></a>
+        <a id="instagram" data-icon="instagram" href="https://www.instagram.com/canvas_tv" target="_blank" rel="noopener noreferrer" title="(opent in een nieuw tabblad)"></a>
+        
+      </p>
+    </section>
+  </div>
+
+  <form>
+    <div id="name" class="fieldset">
+      <input type="text" id="nui-newsletter-signup-name" placeholder="Jouw voornaam" name="name" required="">
+      <label for="nui-newsletter-signup-name">Voornaam</label>
+    </div>
+    <div id="email" class="fieldset fieldset-half">
+      <input type="email" id="nui-newsletter-signup-email" placeholder="Jouw e-mailadres" name="email" required="">
+      <label for="nui-newsletter-signup-email">E-mail</label>
+    </div>
+    <input type="submit" value="Ik schrijf me in">
+    <p><small>Als je je inschrijft op onze nieuwsbrief ga je ermee akkoord dat jouw persoonsgegevens opgeslagen worden in de databanken van de VRT. De VRT behandelt jouw gegevens zoals beschreven in de <a href="https://www.vrt.be/nl/info/gebruiksvoorwaarden/">gebruiksvoorwaarden</a>. Je bent zelf verantwoordelijk voor de juistheid van deze gegevens.</small></p>
+  </form>
+
+</nui-newsletter>
+</div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+
+const myTimeout = setTimeout(ShowPopUp, 3000);
+function ShowPopUp() {
+  modal.style.display = "block";
+    adobe.target.trackEvent({
+  "mbox": "popShown",
+  "params": {
+  "profile.isPop": true
+  }
+  });
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+/*fire this when pop is shown*/
+// adobe.target.trackEvent({
+// "mbox": "popShown",
+// "params": {
+// "profile.isPop": true
+// }
+// });
+// Audience setup :
+// Visitor Profile > isPop>equals>static value>false
+// -----hoe zorgen we ervoor dat mensen de popup niet meerdere keren zien ? 
+// -----hoe zorgen we ervoor dat mensen die al ingeschreven zijn voor specifieke nieuwsbrief deze popup niet zien ? 
+</script>
+
+
