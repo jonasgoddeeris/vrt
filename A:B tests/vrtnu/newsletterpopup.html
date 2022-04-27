@@ -1,9 +1,8 @@
 <style>
-/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1000; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -42,43 +41,40 @@
   cursor: pointer;
 }
 .nui-newsletter-signup .ab15 { /* overschrijft de min widht zodat formulier velden leesbaar zouden zijn */
-    max-width: 50%;
+    min-width: none;
+}
+.nui-newsletter-signup .ab15 form {
+    min-width: 50%;
 }
 </style>
-<!-- The Modal -->
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    
+
     <!-- start canvas -->
-    <div class="newsletter-signup"><nui-newsletter class="nui-newsletter-signup" brand="canvas">
-
-  <div class="ab15">
-    <h2>Bij Canvas is er altijd iets te ontdekken: van topfictie tot straffe documentaires.</h2>
-    <h3>Schrijf je in op de Canvas-nieuwsbrief!</h3>
-  </div>
-
-  <form>
-    <div id="name" class="fieldset">
-      <input type="text" id="nui-newsletter-signup-name" placeholder="Jouw voornaam" name="name" required="">
-      <label for="nui-newsletter-signup-name">Voornaam</label>
-    </div>
-    <div id="email" class="fieldset fieldset-half">
-      <input type="email" id="nui-newsletter-signup-email" placeholder="Jouw e-mailadres" name="email" required="">
-      <label for="nui-newsletter-signup-email">E-mail</label>
-    </div>
-    <input type="submit" value="Ik schrijf me in">
-    <p><small>Als je je inschrijft op onze nieuwsbrief ga je ermee akkoord dat jouw persoonsgegevens opgeslagen worden in de databanken van de VRT. De VRT behandelt jouw gegevens zoals beschreven in de <a href="https://www.vrt.be/nl/info/gebruiksvoorwaarden/">gebruiksvoorwaarden</a>. Je bent zelf verantwoordelijk voor de juistheid van deze gegevens.</small></p>
-  </form>
-
-</nui-newsletter>
-</div>
-    <!-- end canvas -->
-
-  </div> <!-- modal content close -->
-</div> <!-- myModal close -->
+    <div class="newsletter-signup">
+        <nui-newsletter class="nui-newsletter-signup" brand="canvas">
+          <div class="ab15">
+            <h2>Bij Canvas is er altijd iets te ontdekken: van topfictie tot straffe documentaires.</h2>
+            <h3>Schrijf je in op de Canvas-nieuwsbrief!</h3>
+          </div>
+          <form>
+            <div id="name" class="fieldset">
+              <input type="text" id="nui-newsletter-signup-name" placeholder="Jouw voornaam" name="name" required="">
+              <label for="nui-newsletter-signup-name">Voornaam</label>
+            </div>
+            <div id="email" class="fieldset fieldset-half">
+              <input type="email" id="nui-newsletter-signup-email" placeholder="Jouw e-mailadres" name="email" required="">
+              <label for="nui-newsletter-signup-email">E-mail</label>
+            </div>
+            <input type="submit" value="Ik schrijf me in">
+            <p><small>Als je je inschrijft op onze nieuwsbrief ga je ermee akkoord dat jouw persoonsgegevens opgeslagen worden in de databanken van de VRT. De VRT behandelt jouw gegevens zoals beschreven in de <a href="https://www.vrt.be/nl/info/gebruiksvoorwaarden/">gebruiksvoorwaarden</a>. Je bent zelf verantwoordelijk voor de juistheid van deze gegevens.</small></p>
+          </form>
+        </nui-newsletter>
+    </div><!-- end canvas -->
+  </div> 
+</div> 
 
 <script>
 // Get the modal
