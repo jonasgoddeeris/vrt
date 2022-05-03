@@ -86,6 +86,7 @@
 </div>
 
 <script>
+console.log("ABcanvaspopup");
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -99,13 +100,17 @@ var span = document.getElementsByClassName("close")[0];
 
 const myTimeout = setTimeout(ShowPopUp, 3000);
 function ShowPopUp() {
+  if (pop !== true){  
+console.log("popnottrue");
   modal.style.display = "block";
-    adobe.target.trackEvent({
+  }
+  adobe.target.trackEvent({
   "mbox": "popShown",
   "params": {
   "profile.isPop": true
   }
   });
+  let ispopcanvas = true;
 }
 
 // When the user clicks on <span> (x), close the modal
