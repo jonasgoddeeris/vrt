@@ -100,8 +100,8 @@ var span = document.getElementsByClassName("close")[0];
 
 const myTimeout = setTimeout(ShowPopUp, 3000);
 function ShowPopUp() {
-  if (pop !== true){  
-console.log("popnottrue");
+  if (localStorage.getItem('canvaspopup') !== "true"){  
+    console.log("popnottrue");
   modal.style.display = "block";
   }
   adobe.target.trackEvent({
@@ -110,7 +110,7 @@ console.log("popnottrue");
   "profile.isPop": true
   }
   });
-  let ispopcanvas = true;
+  localStorage.setItem('canvaspopup', true);
 }
 
 // When the user clicks on <span> (x), close the modal
