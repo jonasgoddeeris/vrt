@@ -96,7 +96,7 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// after 3 sec, show modal except if already seen.
 
 const myTimeout = setTimeout(ShowPopUp, 3000);
 function ShowPopUp() {
@@ -124,19 +124,25 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-/*fire this when pop is shown*/
-// adobe.target.trackEvent({
-// "mbox": "popShown",
-// "params": {
-// "profile.isPop": true
-// }
-// });
-// Audience setup :
-// Visitor Profile > isPop>equals>static value>false
-// -----hoe zorgen we ervoor dat mensen de popup niet meerdere keren zien ? 
-// -----hoe zorgen we ervoor dat mensen die al ingeschreven zijn voor specifieke nieuwsbrief deze popup niet zien ? 
 </script>
+
+
+
+<!-- 
+fire this when pop is shown
+adobe.target.trackEvent({
+"mbox": "popShown",
+"params": {
+"profile.isPop": true
+}
+});
+Audience setup :
+Visitor Profile > isPop>equals>static value>false
+-----hoe zorgen we ervoor dat mensen de popup niet meerdere keren zien ? 
+-----hoe zorgen we ervoor dat mensen die al ingeschreven zijn voor specifieke nieuwsbrief deze popup niet zien ?  -->
+
+
+
 
 
 <!-- CURRENT STYLE SHEET -->
