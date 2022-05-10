@@ -1,0 +1,97 @@
+<style>
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #1a1c24;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ff6416;
+  width: 80%;
+}
+
+.modal-content .nui-newsletter-signup {
+    border-color: #ff6416;
+    border-top: none;
+    border-bottom: none;
+    margin: 35px auto;
+    padding: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #ff6416;
+  float: right;
+  font-size: 2em;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nui-newsletter-signup .ab15 { /* overschrijft de min widht zodat formulier velden leesbaar zouden zijn */
+    min-width: none;
+}
+.nui-newsletter-signup .ab15form {
+    min-width: 50%;
+}
+.nui-newsletter-signup .ab15 h3  {
+    color: #ff6416;
+}
+.ab15form input {
+    border: 1px solid #ff6416!important;
+}
+.close:hover, .close:focus {
+    color: #fff;
+}
+input#submit15:hover:not(:disabled) {
+    background-color: #ff6416!important;
+}
+/*.nui-newsletter-signup .ab15 h3 {
+    font-size: 0.9rem;
+}
+.nui-newsletter-signup .ab15 h2 {
+    font-size: 1.3rem;
+}*/
+</style>
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <!-- start canvas -->
+    <div class="newsletter-signup">
+        <nui-newsletter class="nui-newsletter-signup" brand="canvas">
+          <div class="ab15">
+            <h2>Mis niks meer van Canvas. De strafste series, documentaires, humor, films en duiding vind je hier.</h2>
+            <h3>Schrijf je in op de Canvas-nieuwsbrief!</h3>
+          </div>
+          <form class="ab15form">
+            <div id="name" class="fieldset">
+              <input type="text" id="nui-newsletter-signup-name" placeholder="Jouw voornaam" name="name" required="">
+              <label for="nui-newsletter-signup-name">Voornaam</label>
+            </div>
+            <div id="email" class="fieldset fieldset-half">
+              <input type="email" id="nui-newsletter-signup-email" placeholder="Jouw e-mailadres" name="email" required="">
+              <label for="nui-newsletter-signup-email">E-mail</label>
+            </div>
+            <input id="submit15" type="submit" value="Ik wil niets missen van Canvas">
+          </form>
+        </nui-newsletter>
+    </div><!-- end canvas -->
+  </div> 
+</div>

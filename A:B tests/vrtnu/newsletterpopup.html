@@ -58,7 +58,7 @@
 .close:hover, .close:focus {
     color: #fff;
 }
-input.submit15:hover:not(:disabled) {
+input#submit15:hover:not(:disabled) {
     background-color: #ff6416!important;
 }
 /*.nui-newsletter-signup .ab15 h3 {
@@ -89,7 +89,7 @@ input.submit15:hover:not(:disabled) {
               <input type="email" id="nui-newsletter-signup-email" placeholder="Jouw e-mailadres" name="email" required="">
               <label for="nui-newsletter-signup-email">E-mail</label>
             </div>
-            <input class="submit15" type="submit" value="Ik schrijf me in">
+            <input id="submit15" type="submit" value="Ik schrijf me in">
           </form>
         </nui-newsletter>
     </div><!-- end canvas -->
@@ -109,7 +109,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // after 3 sec, show modal except if already seen.
 
-const myTimeout = setTimeout(ShowPopUp, 3000);
+const myTimeout = setTimeout(ShowPopUp, 10000);
 function ShowPopUp() {
   if (localStorage.getItem('canvaspopup') !== "true"){  
     console.log("popnottrue");
