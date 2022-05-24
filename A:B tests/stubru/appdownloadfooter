@@ -1,0 +1,26 @@
+a[href="https://itunes.apple.com/be/app/studio-brussel/id388159251?l=nl&mt=8"]
+
+a[href="https://play.google.com/store/apps/details?id=be.vrt.radioplus.stubru&hl=en"]
+
+
+a[href="http://onelink.to/p74t66"]
+
+
+
+<style>
+nui-newsletter.nui-newsletter-signup.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+
+nui-newsletter.nui-newsletter-signup.app h3 {
+    padding-bottom: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
