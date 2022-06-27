@@ -1,0 +1,711 @@
+<style>
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #1a1c24;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ff6416;
+  width: 80%;
+}
+
+.modal-content .nui-newsletter-signup {
+    border-color: #ff6416;
+    border-top: none;
+    border-bottom: none;
+    margin: 35px auto;
+    padding: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #ff6416;
+  float: right;
+  font-size: 2em;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nui-newsletter-signup .ab15 { /* overschrijft de min widht zodat formulier velden leesbaar zouden zijn */
+    min-width: none;
+}
+.nui-newsletter-signup .ab15form {
+    min-width: 50%;
+}
+.nui-newsletter-signup .ab15 h3  {
+    color: #ff6416;
+}
+.ab15form input {
+    border: 1px solid #ff6416!important;
+}
+.close:hover, .close:focus {
+    color: #fff;
+}
+input#submit15:hover:not(:disabled) {
+    background-color: #ff6416!important;
+}
+/*.nui-newsletter-signup .ab15 h3 {
+    font-size: 0.9rem;
+}
+.nui-newsletter-signup .ab15 h2 {
+    font-size: 1.3rem;
+}*/
+</style>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- start sporza -->
+    <div class="vrt-newsletter-form__widget">
+    <div class="optinWidgetRoot" aria-live="polite" data-widget="{
+        &quot;action&quot;: &quot;https://crm.profiel.vrt.be/api/v2/public/optins&quot;,
+        &quot;method&quot;: &quot;post&quot;,
+        &quot;optins&quot;: &quot;18&quot;,
+        &quot;fields&quot;: [
+            {
+                &quot;name&quot;: &quot;firstname&quot;,
+                &quot;type&quot;: &quot;text&quot;,
+                &quot;value&quot;: &quot;&quot;,
+                &quot;required&quot;: &quot;true&quot;,
+                &quot;label&quot;: &quot;Voornaam&quot;,
+                &quot;error&quot;: &quot;Controleer je naam&quot;
+            },
+            {
+                &quot;name&quot;: &quot;email&quot;,
+                &quot;type&quot;: &quot;email&quot;,
+                &quot;value&quot;: &quot;&quot;,
+                &quot;required&quot;: &quot;true&quot;,
+                &quot;label&quot;: &quot;E-mailadres&quot;,
+                &quot;error&quot;: &quot;Controleer je e-mailadres&quot;,
+                &quot;pattern&quot;: &quot;^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$&quot;
+            }
+        ],
+        &quot;submitButtonText&quot;: &quot;Schrijf me in!&quot;,
+        &quot;submitButtonTextSending&quot;: &quot;Bezig met inschrijven&quot;,
+        &quot;error&quot;: &quot;Wegens een fout hebben we jouw verzoek niet kunnen verzenden.&quot;,
+        &quot;success&quot;: &quot;Bedankt om je in te schrijven op onze nieuwsbrief!&quot;
+    }"></div>
+  </div>
+    </div><!-- end sporza -->
+  </div> 
+</div>
+<script>
+console.log("ABsporzapopup");
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// after 3 sec, show modal except if already seen.
+
+const myTimeout = setTimeout(ShowPopUp, 10000);
+function ShowPopUp() {
+  if (localStorage.getItem('sporzapopup') !== "true"){  
+    console.log("popnottrue");
+  modal.style.display = "block";
+  }
+  adobe.target.trackEvent({
+  "mbox": "popShown",
+  "params": {
+  "profile.isPop": true
+  }
+  });
+  localStorage.setItem('sporzapopup', true);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+  console.log('script optin start');
+  function(e, d) {
+    "use strict";
+    var t = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+    t ? t(function() {
+        e.setTimeout(a, 0)
+    }) : e.addEventListener("load", a);
+    var i = {
+        selectors: {
+            root: ".optinWidgetRoot",
+            form: ".optinWidget",
+            inputField: ".inputGroup__input",
+            formField: "input[name]"
+        },
+        classes: {
+            form: "optinWidget",
+            inputGroup: "inputGroup",
+            isValid: "is-valid",
+            isInValid: "is-invalid",
+            hasError: "optinWidget--hasError",
+            hasSubscribed: "optinWidget--hasSubscribed"
+        },
+        widget: {
+            formAttribute: "data-widget",
+            dataset: "widget",
+            stylesheetUrl: {
+                development: "./optinWidget.css",
+                production: "https://sso-dev.vrt.be/optinWidget.min.css"
+            }
+        }
+    }
+      , n = {}
+      , r = {
+        externalStyleSheets: []
+    }
+      , a = function() {
+        if (n.root = d.querySelectorAll(i.selectors.root),
+        n.root.length) {
+            var e = "localhost" === location.hostname || "127.0.0.1" === location.hostname || "" === location.hostname ? "development" : "production";
+            s(i.widget.stylesheetUrl[e], !1, o)
+        }
+    }
+    console.log(e);
+
+      , s = function(e, t, a) {
+        var n = d.createElement("LINK");
+        n.rel = "stylesheet",
+        n.href = e,
+        t ? d.head.appendChild(n) : d.head.insertBefore(n, d.head.firstChild),
+        n.onload = a,
+        n.onerror = a
+    }
+      , o = function() {
+        var e;
+        for (e = 0; e < n.root.length; e++)
+            !function(e) {
+                var t = n.root[e]
+                  , a = JSON.parse(t.dataset[i.widget.dataset]);
+                t.removeAttribute(i.widget.formAttribute),
+                a.stylesheetUrl && "" !== a.stylesheetUrl && -1 === r.externalStyleSheets.indexOf(a.stylesheetUrl) ? (r.externalStyleSheets.push(a.stylesheetUrl),
+                s(a.stylesheetUrl, !0, function() {
+                    l(t, a, e)
+                })) : l(t, a, e)
+            }(e)
+    }
+      , l = function(e, t, a) {
+        var n, r = u(t);
+        for (n = 0; n < t.fields.length; n++)
+            r.appendChild(c(t.fields[n], a));
+        r.appendChild(h(t)),
+        r.appendChild(f(t)),
+        r.appendChild(v(t, "error")),
+        r.appendChild(v(t, "success")),
+        e.appendChild(r)
+    }
+      , u = function(e) {
+        var t = d.createElement("FORM");
+        return t.setAttribute("action", e.action),
+        t.setAttribute("method", e.method),
+        t.className = i.classes.form,
+        t.addEventListener("submit", function(e) {
+            e.preventDefault(),
+            g(e)
+        }),
+        t
+    }
+      , c = function(e, t) {
+        var a = d.createElement("DIV");
+        return a.className = i.classes.inputGroup,
+        a.appendChild(p(e, t)),
+        a.appendChild(m(e, t)),
+        a
+    }
+      , p = function(e, t) {
+        var a = d.createElement("LABEL");
+        a.className = "inputGroup__wrapper",
+        a.setAttribute("for", "for-" + t + "-" + e.name);
+        var n = d.createElement("SPAN");
+        if (n.className = "inputGroup__label",
+        n.textContent = e.label,
+        a.appendChild(n),
+        e.description && "" !== e.description) {
+            var r = d.createElement("SMALL");
+            r.id = "aria-describedby-" + t + "-" + e.name,
+            r.className = "inputGroup__description",
+            r.textContent = e.description,
+            a.appendChild(r)
+        }
+        var i = d.createElement("SMALL");
+        return i.className = "inputGroup__error",
+        i.textContent = e.error,
+        a.appendChild(i),
+        a
+    }
+      , m = function(e, t) {
+        var a = d.createElement("INPUT");
+        if (a.id = "for-" + t + "-" + e.name,
+        a.className = "inputGroup__input",
+        a.name = e.name,
+        a.type = e.type,
+        a.value = e.value,
+        "true" === e.required && (a.required = !0,
+        a.setAttribute("aria-required", !0)),
+        e.description && "" !== e.description && a.setAttribute("aria-describedby", "aria-describedby-" + t + "-" + e.name),
+        e.pattern && "" !== e.pattern && a.setAttribute("pattern", e.pattern),
+        a.addEventListener("input", function(e) {
+            e.preventDefault(),
+            b(e.target, !1),
+            E(e.target)
+        }),
+        a.addEventListener("blur", function(e) {
+            e.preventDefault(),
+            b(e.target, !0)
+        }),
+        a.required || a.value)
+            try {
+                setTimeout(function() {
+                    b(a, !1)
+                }, 0)
+            } catch (e) {}
+        return a
+    }
+      , h = function(e) {
+        var t = d.createElement("INPUT");
+        return t.type = "hidden",
+        t.name = "optins",
+        t.value = e.optins,
+        t
+    }
+      , f = function(e) {
+        var t = d.createElement("BUTTON");
+        t.type = "submit",
+        t.className = "optinWidget__button";
+        var a, n = d.createElement("DIV");
+        for (n.className = "optinWidget__loading",
+        a = 0; a < 3; a++) {
+            var r = d.createElement("DIV");
+            r.className = "loading__bounce loading__bounce--" + (a + 1),
+            r.setAttribute("aria-hidden", !0),
+            n.appendChild(r)
+        }
+        var i = d.createElement("SPAN");
+        i.className = "loading__text",
+        i.textContent = e.submitButtonTextSending,
+        n.appendChild(i),
+        t.appendChild(n);
+        var s = d.createElement("DIV");
+        s.className = "optinWidget__subscribed",
+        s.setAttribute("aria-hidden", !0),
+        t.appendChild(s);
+        var o = d.createElement("SPAN");
+        return o.className = "optinWidget__button-text",
+        o.textContent = e.submitButtonText,
+        t.appendChild(o),
+        t
+    }
+      , v = function(e, t) {
+        var a = d.createElement("P");
+        return a.className = "optinWidget__" + t,
+        a.setAttribute("role", "alert"),
+        a.textContent = e[t],
+        a
+    }
+      , g = function(e) {
+        if ((!e.target.dataset.resolved || "true" !== e.target.dataset.resolved) && ((!e.target.dataset.pending || "true" !== e.target.dataset.pending) && (e.target.dataset.pending = !0,
+        y(e.target)))) {
+            var t = e.target.action
+              , a = e.target.method
+              , n = _(e.target)
+              , r = new XMLHttpRequest;
+              console.log("n");
+              r.addEventListener("readystatechange", function() {
+                4 === this.readyState && (200 === this.status && (e.target.reset(),
+                e.target.classList.remove(i.classes.hasError),
+                e.target.classList.add(i.classes.hasSubscribed),
+                e.target.dataset.resolved = !0),
+                200 !== this.status && (e.target.classList.remove(i.classes.hasSubscribed),
+                e.target.classList.add(i.classes.hasError)),
+                e.target.dataset.pending = !1)
+            }),
+            r.open(a, t),
+            r.setRequestHeader("Content-Type", "application/json"),
+            r.send(n)
+        }
+    }
+      , b = function(e, t) {
+        var a = e.checkValidity()
+          , n = A(e, i.classes.inputGroup);
+        if (a)
+            return n.classList.remove(i.classes.isInValid),
+            void n.classList.add(i.classes.isValid);
+        t && (n.classList.remove(i.classes.isValid),
+        n.classList.add(i.classes.isInValid))
+    }
+      , y = function(e) {
+        var t, a = e.querySelectorAll(i.selectors.inputField), n = !!a.length;
+        for (t = 0; t < a.length; t++) {
+            a[t].checkValidity() || (n = !1)
+        }
+        return n
+    }
+      , _ = function(e) {
+        var t, a = {}, n = e.querySelectorAll(i.selectors.formField);
+        for (t = 0; t < n.length; t++)
+            "optins" !== n[t].name ? a[n[t].name] = n[t].value : a.optins = [n[t].value];
+        return JSON.stringify(a)
+    }
+      , E = function(e) {
+        A(e, i.classes.form).dataset.resolved = !1
+    }
+      , A = function(e, t) {
+        for (; (e = e.parentElement) && !e.classList.contains(t); )
+            ;
+        return e
+    }
+}(window, window.document);</script>
+<!-- <script src="https://sso.vrt.be/optinWidget.min.js"></script> -->
+<!-- <style>
+  @font-face {
+    font-display: swap;
+    font-family: FN;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://sso.vrt.be/latest/fonts/FormaDJRText-Regular.woff) format("woff")
+}
+
+.optinWidget .inputGroup__input,.optinWidget .optinWidget__button {
+    margin: 0;
+    overflow: visible;
+    text-transform: none
+}
+
+.optinWidget .optinWidget__button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+.optinWidget .optinWidget__button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+.optinWidget :-ms-input-placeholder,.optinWidget ::-moz-placeholder,.optinWidget ::-ms-input-placeholder,.optinWidget ::-webkit-input-placeholder,.optinWidget ::placeholder {
+    color: #a8b0bd
+}
+
+.optinWidget .optinWidget__button {
+    align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    font-family: FN,sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1em;
+    margin-left: auto;
+    margin-top: 28px;
+    outline: none;
+    padding: .5rem 2rem;
+    position: relative;
+    -webkit-transition: background .8s cubic-bezier(.19,1,.22,1),box-shadow .8s cubic-bezier(.19,1,.22,1),color .8s cubic-bezier(.19,1,.22,1);
+    transition: background .8s cubic-bezier(.19,1,.22,1),box-shadow .8s cubic-bezier(.19,1,.22,1),color .8s cubic-bezier(.19,1,.22,1);
+    z-index: 1
+}
+
+.optinWidget .optinWidget__button:hover {
+    background: #000;
+    color: #fff
+}
+
+.optinWidget .optinWidget__button:active {
+    background: #4be45e;
+    box-shadow: inset 0 1px 0 0 #8b95a7,inset 0 3px 0 0 #1ec532
+}
+
+.optinWidget .optinWidget__button:after {
+    border-radius: 17.5px;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: box-shadow .2s cubic-bezier(.23,1,.32,1);
+    transition: box-shadow .2s cubic-bezier(.23,1,.32,1)
+}
+
+.optinWidget .optinWidget__button:focus:after {
+    box-shadow: 0 0 0 2px #fff,0 0 0 4px #00a1c7;
+    z-index: 0
+}
+
+.optinWidget .optinWidget__button[disabled] {
+    background: rgba(93,252,113,.5);
+    box-shadow: inset 0 -1px 0 0 #8b95a7,inset 0 -3px 0 0 #4be45e;
+    color: #8b95a7;
+    cursor: not-allowed
+}
+
+.optinWidget[data-resolved=true] .optinWidget__button-text {
+    margin-left: 10px
+}
+
+.optinWidget small {
+    font-size: .875em;
+    line-height: 1.43
+}
+
+.optinWidget .inputGroup__label {
+    align-items: center;
+    display: inline-flex;
+    font-size: 1.2em;
+    line-height: 1.6
+}
+
+.optinWidget .inputGroup__description,.optinWidget .inputGroup__error {
+    flex: 1 0 100%;
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+
+.optinWidget .inputGroup__error {
+    color: #ff2455;
+    display: none;
+    font-size: 1em;
+    line-height: 2em
+}
+
+.optinWidget .optinWidget__error {
+    color: #ff2455;
+    display: none;
+    margin: 10px 0 0
+}
+
+.optinWidget__success {
+    color: #000;
+    display: none;
+    margin: 10px 0 0
+}
+
+.optinWidget .inputGroup__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #00000080;
+    box-shadow: none;
+    color: #000;
+    flex: 1 0 100%;
+    font-size: 1em;
+    height: 35px;
+    line-height: 1;
+    margin-top: 6px;
+    max-width: 100%;
+    padding: 0 15px;
+    -webkit-transition: background-color .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),border-color .2s cubic-bezier(.23,1,.32,1),color .2s cubic-bezier(.23,1,.32,1);
+    transition: background-color .2s cubic-bezier(.23,1,.32,1),box-shadow .2s cubic-bezier(.23,1,.32,1),border-color .2s cubic-bezier(.23,1,.32,1),color .2s cubic-bezier(.23,1,.32,1);
+    width: 100%
+}
+
+.optinWidget .inputGroup__input:focus {
+    outline: none
+}
+
+.optinWidget .inputGroup.is-valid .inputGroup__input:not([disabled]) {
+    border-color: #0ad828
+}
+
+.optinWidget .inputGroup.is-invalid .inputGroup__input:not([disabled]) {
+    background: rgba(255,36,85,.1);
+    border-color: #ff2455;
+    color: #ff2455
+}
+
+.optinWidget .inputGroup.is-invalid .inputGroup__error {
+    display: block
+}
+
+.optinWidget .loading__text {
+    color: #000;
+    font-size: 1em;
+    line-height: 1em;
+    margin-left: 10px
+}
+
+.optinWidget .loading__bounce {
+    -webkit-animation: optinWidgetLoading 1.4s ease-in-out infinite both;
+    animation: optinWidgetLoading 1.4s ease-in-out infinite both;
+    background-color: #000;
+    border-radius: 100%;
+    display: inline-block;
+    height: 1em;
+    width: 1em
+}
+
+.optinWidget .loading__bounce--1 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s
+}
+
+.optinWidget .loading__bounce--2 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s
+}
+
+@-webkit-keyframes optinWidgetLoading {
+    0%,80%,to {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(.5)
+    }
+}
+
+@keyframes optinWidgetLoading {
+    0%,80%,to {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+}
+
+.optinWidget__subscribed {
+    -webkit-animation: optinWidgetPulse .4s ease-in-out both;
+    animation: optinWidgetPulse .4s ease-in-out both;
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+    display: none;
+    height: 16px;
+    position: relative;
+    top: -2px;
+    transform: rotate(45deg);
+    width: 8px
+}
+
+@-webkit-keyframes optinWidgetPulse {
+    0% {
+        transform: rotate(45deg) scaleX(1);
+        -webkit-transform: rotate(45deg) scaleX(1)
+    }
+
+    50% {
+        transform: rotate(45deg) scale3d(1.35,1.35,1.35);
+        -webkit-transform: rotate(45deg) scale3d(1.35,1.35,1.35)
+    }
+
+    to {
+        transform: rotate(45deg) scaleX(1);
+        -webkit-transform: rotate(45deg) scaleX(1)
+    }
+}
+
+@keyframes optinWidgetPulse {
+    0% {
+        transform: rotate(45deg) scaleX(1)
+    }
+
+    50% {
+        transform: rotate(45deg) scale3d(1.35,1.35,1.35)
+    }
+
+    to {
+        transform: rotate(45deg) scaleX(1)
+    }
+}
+
+.optinWidget {
+    box-sizing: border-box;
+    color: #000;
+    font-family: inherit;
+    font-family: FN,sans-serif;
+    font-size: 1em;
+    line-height: 2em;
+    padding: 0
+}
+
+.optinWidget .inputGroup__wrapper {
+    align-items: center;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.optinWidget .optinWidget__loading {
+    align-items: center;
+    display: none;
+    flex-wrap: nowrap;
+    justify-content: center
+}
+
+.optinWidget .inputGroup {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    padding: 0;
+    position: relative
+}
+
+.optinWidget .inputGroup+.inputGroup,.optinWidget .inputGroup:first-child {
+    margin-top: 0
+}
+
+.optinWidget *,.optinWidget:after,.optinWidget :after,.optinWidget:before,.optinWidget :before {
+    box-sizing: border-box
+}
+
+@media only screen and (min-width: 768px) {
+    .optinWidget .inputGroup {
+        margin-top:20px
+    }
+}
+
+.optinWidget--hasError .optinWidget__error,.optinWidget--hasSubscribed .optinWidget__success {
+    display: block
+}
+
+.optinWidget[data-pending=true] .optinWidget__loading {
+    display: flex
+}
+
+.optinWidget[data-pending=true] .optinWidget__button-text {
+    display: none
+}
+
+.optinWidget[data-resolved=true] .optinWidget__subscribed {
+    display: inline-block
+}
+</style> -->
