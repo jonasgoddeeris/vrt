@@ -1,10 +1,20 @@
+<!-- script in head -->
+<script><console.log("ab-tourmanager start head");</script>
+<script defer src="https://sport-components.sporza.be/0.6.422/sport-components.client.js"></script>
+<script><!--{"reqUrl":"/scripttag?context=web","host":"https://sport-components.sporza.be"}--></script>
+
+<!-- script in body -->
 <script>
-console.log("ab-tourmanager start");
+console.log("ab-tourmanager start body");
 var sidebar = document.querySelector('.vrt-aside--body');
-var sidebarContent = document.querySelector(".vrt-aside--body").innerHTML;
-sidebar.prepend(sidebarContent);
-console.log("ab-tourmanager innertHTML added");
-</script>
+if (sidebar !== null){
+var ABtourmanager = document.createElement('div');
+ABtourmanager.innerHTML = '<div id="ab-tourmanager-box"></div>';
+sidebar.prepend(ABtourmanager)
+}</script>
+
+<!-- HTML SET #ab-tourmanager-box-->
+<script>console.log("ab-tourmanager start HTML");</script>
 <div>
 <div class="vrt-sc vrt-sc--wmRanking">
 <div data-hypernova-key="Wielermanager" data-hypernova-id="fc7a7ce0-1536-4d92-b0ea-13c298b0c8c7"><div style="width:100%
