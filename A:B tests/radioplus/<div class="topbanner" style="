@@ -1,0 +1,29 @@
+<div class="topbanner" style="
+    padding: 20px;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    font-size: large;
+    background-color: #464243;
+    /* color: blue; */
+    display: block;
+    position: sticky;
+    top: 0px;
+    z-index: 99999999999;
+"><a href="https://www.vrt.be/vrtnu/livestream/audio/radio1">Wil je de beste live luisterervaring? Ontdek live radio op VRT NU!</a></div>
+
+<style>
+element.style {
+    padding: 20px;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    font-size: large;
+    background-color: #464243;
+    /* color: blue; */
+    display: block;
+    position: sticky;
+    top: 0px;
+    z-index: 99999999999;
+}
+</style>
