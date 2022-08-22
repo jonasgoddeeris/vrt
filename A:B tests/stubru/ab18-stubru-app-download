@@ -1,0 +1,17 @@
+
+<style>
+.ab-18-link {
+	color: #FFFFFF;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    line-height: 24px;
+    font-family: Fakt Pro;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 320px;
+	}
+.ab18-download {
+	color: #f0ff73;
+}
+</style>
+<p class="ab-18-link">Download de StuBru-app voor <a href="https://itunes.apple.com/be/app/studio-brussel/id388159251?l=nl&amp;mt=8" target="_blank" class="ab18-download">iOS</a> / <a class="ab18-download" href="https://play.google.com/store/apps/details?id=be.vrt.radioplus.stubru&amp;hl=en" target="_blank">Android</a>.</p>
