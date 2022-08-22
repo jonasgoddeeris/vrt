@@ -1,4 +1,3 @@
-
 <style>
 .ab-18-link {
 	color: #FFFFFF;
@@ -14,4 +13,9 @@
 	color: #f0ff73;
 }
 </style>
-<p class="ab-18-link">Download de StuBru-app voor <a href="https://itunes.apple.com/be/app/studio-brussel/id388159251?l=nl&amp;mt=8" target="_blank" class="ab18-download">iOS</a> / <a class="ab18-download" href="https://play.google.com/store/apps/details?id=be.vrt.radioplus.stubru&amp;hl=en" target="_blank">Android</a>.</p>
+<script>
+var ab18-zz = document.querySelector("#__next > div > div.css-11fvreq.e1wrcbnk9 > div > div.css-v5olil.e1wrcbnk7");
+var ab18-z = document.createElement('div'); // is a node
+ab18-z.innerHTML = '<p class="ab-18-link">Download de StuBru-app voor <a href="https://itunes.apple.com/be/app/studio-brussel/id388159251?l=nl&amp;mt=8" target="_blank" class="ab18-download">iOS</a> / <a class="ab18-download" href="https://play.google.com/store/apps/details?id=be.vrt.radioplus.stubru&amp;hl=en" target="_blank">Android</a>.</p>';
+ab18-zz.appendChild(ab18-z);
+</script>
