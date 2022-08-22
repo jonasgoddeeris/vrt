@@ -1,4 +1,5 @@
 <script>
+console.log('growthbook injected via adobe target');
 window.GROWTHBOOK_CONFIG = {
   // Optional logged-in user id
   userId: digitalData.user.marketingId,
