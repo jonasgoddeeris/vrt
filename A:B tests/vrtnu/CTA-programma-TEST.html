@@ -6,10 +6,8 @@ var viewType = document.querySelector("#main > div > section.VO17bo > div.IlzBhl
 var progressBar = document.querySelector("#main > div > section.VO17bo > div.IlzBhl.IDixnq > div.kH_JiI > div > div.pCVvvC > div > div.OtMY77.XyECuU > div > div");
 var progresBarparent = document.querySelector("#main > div > section.VO17bo > div.IlzBhl.IDixnq > div.kH_JiI > div > div.pCVvvC > div > div.OtMY77.XyECuU > div");
 var episodeInfo = document.querySelector("#main > div > section.VO17bo > div.IlzBhl.IDixnq > div.kH_JiI > div > div.pCVvvC > div > div.GJjO6p > div > div > span.ojv_2y.ZGTXQe");
-var CTAbtn = document.querySelector("#btncopy");
-
-
-
+var CTAbtnCopy = document.querySelector("#btncopy");
+var CTAbtn = document.querySelector("#main > div > section.VO17bo > div.IlzBhl.IDixnq > div.w33xdE > div.ZUpuzZ > a");
 
 if (viewType.innerText =='Meest recente aflevering' && progressBar === null){
 console.log('1 -- start kijken meest recente aflevering');
@@ -18,22 +16,23 @@ CTAbtn.innerText = buttonCopy;
 } else if (viewType.innerText =='Meest recente aflevering' && progressBar !== null) {
  console.log('1 -- start kijken meest recente aflevering');
 var buttonCopy = episodeInfo.innerText + " Verder kijken";
-CTAbtn.innerText = buttonCopy;
+CTAbtnCopy.innerText = buttonCopy;
 }
-CTAbtn.after = progresBarparent;
+// CTAbtn.after(progresBarparent);
+CTAbtn.parentNode.insertBefore(progresBarparent, CTAbtn);
 </script>
 <style>
 	#main > div > section.VO17bo > div.IlzBhl.IDixnq > div.kH_JiI {
 		display: none;
 	}
 
-
-MOBILE Breakpoint
+@media only screen and (max-width: 768px){
 	a.Dny3Ck.g4AUsT.NDVofP.ah8V5P {
     width: 100%;
     display: flex;
     display: flex;
     justify-content: center;
+}
 }
 </style>
 <div class="ZUpuzZ">
