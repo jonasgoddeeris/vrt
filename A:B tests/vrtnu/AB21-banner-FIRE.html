@@ -7,9 +7,6 @@
     display: block;
     width: 100%;
 }
-.u4JD4T {
-    margin-top: 3.5em;
-}
 </style>
 <script>
 console.log("start AB21-vrtmaxbanner-fire")
@@ -19,6 +16,10 @@ var text = document.createTextNode("Dit programma kaart maatschappelijke problem
 link.appendChild(text);
 banner.setAttribute("class", "topbanner");
 banner.appendChild(link);
-var header = document.querySelector("#root");
-header.prepend(banner);
+var header = document.querySelector("#root > nav");
+// header.prepend(banner);
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+insertAfter(banner,header);
 </script>
