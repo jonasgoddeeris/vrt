@@ -1,0 +1,15 @@
+function addData(){
+console.log("click on thumbs")
+window.digitalData.events = window.digitalData.events || [];
+window.digitalData.events.push({
+    'qualtrics' : QSI.id,
+    'internalUser' : true,
+    'weather' : 'Cloudy'
+});
+};
+var Qthumbs = document.getElementsByClassName('QSI__EmbeddedFeedbackContainer_Thumbs');
+Qthumbs.addEventListener("click", addData);
+
+
+document.getElementsByClassName('QSI__EmbeddedFeedbackContainer_Thumbs')[0].children[0];
+document.getElementsByClassName('QSI__EmbeddedFeedbackContainer_Thumbs')[0].children[1];
