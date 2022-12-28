@@ -79,25 +79,23 @@ help.appendChild(span1);
 help.appendChild(span2);
 nps.appendChild(scorelist);
 
-
 // logic after click on nps btn
 const buttons = document.getElementsByName("npsbtn")
 buttons.forEach(button => {
      button.addEventListener('click', handleClick, false);
 });
-function handleClick() {
-    // score aan analytics doorsturen
-    console.log(this.textContent);
-    _satellite.track('npsScore',{interaction:'nps score',interactionDetail:this.textContent});
+    function handleClick() {
+        // score aan analytics doorsturen
+        console.log(this.textContent);
+        _satellite.track('npsScore',{interaction:'nps score',interactionDetail:this.textContent});
 
+        // bedanktboodschap
+        help.setAttribute("class", "hide");
+        scorelist.setAttribute("class", "hide");
+        header.innerText="Bedankt voor je stem!"
 
-    // bedanktboodschap
-    help.setAttribute("class", "hide");
-    scorelist.setAttribute("class", "hide");
-    header.innerText="Bedankt voor je stem!"
-
-    // local storage bijhouden dat al heeft gestemd voor dit programma
-    localStorage.setItem("nps " + digitalData.page.program_name , this.textContent);
-};
+        // local storage bijhouden dat al heeft gestemd voor dit programma
+        localStorage.setItem("nps " + digitalData.page.program_name , this.textContent);
+    };
 };
 </script>
