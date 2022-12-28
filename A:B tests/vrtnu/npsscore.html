@@ -31,13 +31,13 @@
 console.log("nps-start-injection");
 
 // Al gestemd ? local storage check
-
 let scored = localStorage.getItem("nps " + digitalData.page.program_name);
 if (scored) {
     console.log("reeds NPS score gegeven")
 } else {
    setnps();
 };
+
 function setnps(){
 // main element
 let nps = document.createElement('div'); 
@@ -88,13 +88,15 @@ buttons.forEach(button => {
 function handleClick() {
     // score aan analytics doorsturen
     console.log(this.textContent);
+    _satellite.track('npsScore',{interaction:'nps score',interactionDetail:this.textContent});
+
 
     // bedanktboodschap
     help.setAttribute("class", "hide");
     scorelist.setAttribute("class", "hide");
     header.innerText="Bedankt voor je stem!"
 
-    // local storage bijhouden dat al heeft gestemd
+    // local storage bijhouden dat al heeft gestemd voor dit programma
     localStorage.setItem("nps " + digitalData.page.program_name , this.textContent);
 };
 };
