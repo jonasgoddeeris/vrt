@@ -108,8 +108,9 @@ console.log("refreshNps triggered");
 console.log("originalURL is " + originalURL);
 let refreshURL = window.location.href;
 console.log("refreshURL is " + refreshURL);
-if (originalURL !== refreshURL){
-    nps.setAttribute("class", "hide");
+if (refreshURL !== originalURL){
+    console.log('urls not the same');
+    document.querySelector("#-description > div.nps-container").setAttribute("class", "hide");
 }
 }
 </script>
