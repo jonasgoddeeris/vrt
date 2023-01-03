@@ -30,7 +30,7 @@
 <script>
 console.log("nps-start-injection");
 //originalURL
-let originalURL = document.location.href;
+let originalURL = window.location.href;
 
 // Al gestemd ? local storage check
 let scored = localStorage.getItem("nps " + digitalData.page.program_name);
@@ -104,7 +104,7 @@ buttons.forEach(button => {
 }
 function refreshNps(){
 console.log("refreshNps triggered");
-let refreshURL = document.location.href;
+let refreshURL = window.location.href;
 if (originalURL !== refreshURL){
     nps.setAttribute("class", "hide");
 }
