@@ -117,6 +117,8 @@ console.log("refreshURL is " + refreshURL);
 if (refreshURL !== originalURL){
     console.log('urls not the same');
     document.querySelector("#-description > div.nps-container").setAttribute("class", "hide");
+} else {
+    document.querySelector("#-description > div.hide").setAttribute("class", "nps-container");
 }
 }
 </script>
