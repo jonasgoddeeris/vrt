@@ -99,3 +99,39 @@ buttons.forEach(button => {
     };
 };
 </script>
+
+<!-- 
+testen in adobe launch.
+var _evar25
+var _evar26
+    case "read":
+        _evar25 = "add to list - already read"
+        _evar26 = _satellite.getVar('dl_event_book')
+        break
+    case "trackRating":
+        _evar25 = "rate book"
+        _evar26 = _satellite.getVar('dl_event_book')
+        break
+    case "trackReview":
+        _evar25 = "review book"
+        _evar26 = _satellite.getVar('dl_event_book')
+        break
+    case "trackShareProfile":
+        _evar25 = "share profile"
+        _evar26 = "facebook"
+        break
+    case "trackShareReview":
+        _evar25 = "share review"
+        _evar26 = "facebook"
+        break
+    case "trackWantToRead":
+        _evar25 = "add to list - want to read"
+        _evar26 = _satellite.getVar('dl_event_book')
+        break
+}
+
+_satellite.setVar('dl_event_interaction',_evar25);
+_satellite.setVar('dl_event_interactiondetail',_evar26);
+
+
+ -->
