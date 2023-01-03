@@ -38,7 +38,7 @@ if (scored) {
     console.log("reeds NPS score gegeven")
 } else {
    setnps();
-};
+}
 
 function setnps(){
 // main element
@@ -90,7 +90,7 @@ buttons.forEach(button => {
         let npsScore = parseInt(this.textContent);
         // score aan analytics doorsturen
         console.log(npsScore);
-        console.log(typeof npsScore)
+        console.log(typeof npsScore);
         _satellite.track('npsScore',{interaction:'nps score',programRating:npsScore});
 
         // bedanktboodschap
@@ -100,9 +100,9 @@ buttons.forEach(button => {
 
         // local storage bijhouden dat al heeft gestemd voor dit programma
         localStorage.setItem("nps " + digitalData.page.program_name , this.textContent);
-    };
-};
-function refreshNps() {
+    }
+}
+function refreshNps(){
 console.log("refreshNps triggered");
 let refreshURL = document.location.href;
 if (originalURL !== refreshURL){
