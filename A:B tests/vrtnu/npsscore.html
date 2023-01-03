@@ -29,6 +29,8 @@
 </style>
 <script>
 console.log("nps-start-injection");
+//originalURL
+let originalURL = document.location.href;
 
 // Al gestemd ? local storage check
 let scored = localStorage.getItem("nps " + digitalData.page.program_name);
@@ -40,7 +42,7 @@ if (scored) {
 
 function setnps(){
 // main element
-let nps = document.createElement('div'); 
+var nps = document.createElement('div'); 
 let header = document.createElement('h2');
 let text = document.createTextNode("Hoe waarschijnlijk is het dat je dit programma zou aanbevelen aan een vriend?");
 
@@ -85,9 +87,11 @@ buttons.forEach(button => {
      button.addEventListener('click', handleClick, false);
 });
     function handleClick() {
+        let npsScore = parseInt(this.textContent);
         // score aan analytics doorsturen
-        console.log(this.textContent);
-        _satellite.track('npsScore',{interaction:'nps score',interactionDetail:this.textContent});
+        console.log(npsScore);
+        console.log(typeof npsScore)
+        _satellite.track('npsScore',{interaction:'nps score',programRating:npsScore});
 
         // bedanktboodschap
         help.setAttribute("class", "hide");
@@ -98,40 +102,11 @@ buttons.forEach(button => {
         localStorage.setItem("nps " + digitalData.page.program_name , this.textContent);
     };
 };
-</script>
-
-<!-- 
-testen in adobe launch.
-var _evar25
-var _evar26
-    case "read":
-        _evar25 = "add to list - already read"
-        _evar26 = _satellite.getVar('dl_event_book')
-        break
-    case "trackRating":
-        _evar25 = "rate book"
-        _evar26 = _satellite.getVar('dl_event_book')
-        break
-    case "trackReview":
-        _evar25 = "review book"
-        _evar26 = _satellite.getVar('dl_event_book')
-        break
-    case "trackShareProfile":
-        _evar25 = "share profile"
-        _evar26 = "facebook"
-        break
-    case "trackShareReview":
-        _evar25 = "share review"
-        _evar26 = "facebook"
-        break
-    case "trackWantToRead":
-        _evar25 = "add to list - want to read"
-        _evar26 = _satellite.getVar('dl_event_book')
-        break
+function refreshNps() {
+console.log("refreshNps triggered");
+let refreshURL = document.location.href;
+if (originalURL !== refreshURL){
+    nps.setAttribute("class", "hide");
 }
-
-_satellite.setVar('dl_event_interaction',_evar25);
-_satellite.setVar('dl_event_interactiondetail',_evar26);
-
-
- -->
+}
+</script>
