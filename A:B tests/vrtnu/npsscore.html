@@ -139,7 +139,13 @@ if (refreshURL !== originalURL){
     document.querySelector('[id$="-description"] > div.nps-container').setAttribute("class", "hide");
 } else {
     console.log('urls is the same');
+    // local storage check
+    let scored = localStorage.getItem("nps " + digitalData.page.program_name);
+    if (scored) {
+        console.log("reeds NPS score gegeven")
+    } else {
     document.querySelector('[id$="-description"] > div.hide').setAttribute("class", "nps-container");
+    }
 }
 }
 </script>
