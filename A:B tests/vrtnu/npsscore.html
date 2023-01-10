@@ -23,10 +23,23 @@
     align-items: center;
     margin: 2rem 3rem 1rem 3rem;
 }
-.score-list > .Dny3Ck .ZIZiGs {
-    display: flex;
-    justify-content: space-around;
+.npsbutton {
     min-width: 46px;
+    background-color: var(--color-transparent-default-10);
+    color: var(--color-text-default);
+    font: normal 600 1rem/1.5 Roobert,Arial,sans-serif;
+    letter-spacing: .005em;
+    align-items: center;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 0.5rem;
+    margin: 0;
+    outline: none;
+    padding: 0.5rem 0.75rem;
 }
 
 .help-nps {
@@ -69,7 +82,7 @@ let span2 = document.createElement('span');
 let scorelist = document.createElement('div');
 for (let i = 0; i < 11; i++) {
     let npsbtn = document.createElement('button');
-    npsbtn.setAttribute("class", "Dny3Ck ZIZiGs");
+    npsbtn.setAttribute("class", "nps-button");
     npsbtn.setAttribute("name", "npsbtn");
     npsbtn.setAttribute("value", i);
     npsbtn.innerText = i;
@@ -86,7 +99,7 @@ nps.appendChild(header);
 header.appendChild(text);
 span1.appendChild(text1);
 span2.appendChild(text2);
-let anchor = document.querySelector("#-description");
+let anchor = document.querySelector('[id$="-description"]');
 anchor.appendChild(nps);
 nps.appendChild(help);
 help.appendChild(span1);
