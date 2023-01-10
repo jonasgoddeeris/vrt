@@ -56,7 +56,6 @@
 console.log("nps-start-injection");
 //originalURL
 var originalURL = window.location.href;
-console.log(originalURL);
 
 // Al gestemd ? local storage check
 let scored = localStorage.getItem("nps " + digitalData.page.program_name);
@@ -133,14 +132,12 @@ buttons.forEach(button => {
 //spa functie getriggerd door SPA custom event in Adobe launch
 function refreshNps(){
 console.log("refreshNps triggered");
-console.log("originalURL is " + originalURL);
 let refreshURL = window.location.href;
-console.log("refreshURL is " + refreshURL);
 if (refreshURL !== originalURL){
-    console.log('urls not the same');
+    console.log("urls not the same");
     document.querySelector('[id$="-description"] > div.nps-container').setAttribute("class", "hide");
 } else {
-    console.log('urls are the same');
+    console.log("urls are the same");
     // local storage check
     let scored = localStorage.getItem("nps " + digitalData.page.program_name);
     if (scored) {
