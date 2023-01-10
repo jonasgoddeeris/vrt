@@ -131,7 +131,6 @@ buttons.forEach(button => {
 //spa functie gertriggerd door SPA custom event in Adobe launch
 function refreshNps(){
 console.log("refreshNps triggered");
-let anchorNPS = document.querySelector('[id$="-description"]');
 console.log("originalURL is " + originalURL);
 let refreshURL = window.location.href;
 console.log("refreshURL is " + refreshURL);
@@ -139,6 +138,7 @@ if (refreshURL !== originalURL){
     console.log('urls not the same');
     document.querySelector('[id$="-description"] > div.nps-container').setAttribute("class", "hide");
 } else {
+    console.log('urls is the same');
     document.querySelector('[id$="-description"] > div.hide').setAttribute("class", "nps-container");
 }
 }
