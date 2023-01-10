@@ -145,7 +145,7 @@ if (refreshURL !== originalURL){
     let scored = localStorage.getItem("nps " + digitalData.page.program_name);
     if (scored) {
         console.log("reeds NPS score gegeven")
-    } else {
+    } else if (document.querySelector('[id$="-description"] > div.hide')){
     document.querySelector('[id$="-description"] > div.hide').setAttribute("class", "nps-container");
     }
 }
