@@ -133,18 +133,20 @@ buttons.forEach(button => {
 function refreshNps(){
 console.log("refreshNps triggered");
 let refreshURL = window.location.href;
-if (refreshURL !== originalURL){
-    console.log("urls not the same");
-    document.querySelector('[id$="-description"] > div.nps-container').setAttribute("class", "hide");
-} else {
-    console.log("urls are the same");
-    // local storage check
-    let scored = localStorage.getItem("nps " + digitalData.page.program_name);
-    if (scored) {
-        console.log("reeds NPS score gegeven")
-    } else if (document.querySelector('[id$="-description"] > div.hide')){
-    document.querySelector('[id$="-description"] > div.hide').setAttribute("class", "nps-container");
+    if (refreshURL !== originalURL){
+        console.log("urls not the same")
+        if (document.querySelector('[id$="-description"] > div.nps-container')){
+        document.querySelector('[id$="-description"] > div.nps-container').setAttribute("class", "hide");
+        }
+    } else {
+        console.log("urls are the same")
+        // local storage check
+        let scored = localStorage.getItem("nps " + digitalData.page.program_name);
+        if (scored) {
+            console.log("reeds NPS score gegeven")
+        } else if (document.querySelector('[id$="-description"] > div.hide')){
+        document.querySelector('[id$="-description"] > div.hide').setAttribute("class", "nps-container");
+        }
     }
-}
 }
 </script>
