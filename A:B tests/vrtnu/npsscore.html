@@ -23,7 +23,7 @@
     align-items: center;
     margin: 2rem 3rem 1rem 3rem;
 }
-.npsbutton {
+.nps-button {
     min-width: 46px;
     background-color: var(--color-transparent-default-10);
     color: var(--color-text-default);
@@ -99,7 +99,7 @@ nps.appendChild(header);
 header.appendChild(text);
 span1.appendChild(text1);
 span2.appendChild(text2);
-let anchor = document.querySelector('[id$="-description"]');
+var anchorNPS = document.querySelector('[id$="-description"]');
 anchor.appendChild(nps);
 nps.appendChild(help);
 help.appendChild(span1);
@@ -135,9 +135,9 @@ let refreshURL = window.location.href;
 console.log("refreshURL is " + refreshURL);
 if (refreshURL !== originalURL){
     console.log('urls not the same');
-    document.querySelector("#-description > div.nps-container").setAttribute("class", "hide");
+    anchorNPS.lastChild.setAttribute("class", "hide");
 } else {
-    document.querySelector("#-description > div.hide").setAttribute("class", "nps-container");
+    anchorNPS.lastChild.setAttribute("class", "nps-container");
 }
 }
 </script>
