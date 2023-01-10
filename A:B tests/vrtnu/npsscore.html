@@ -61,12 +61,14 @@ console.log(originalURL);
 // Al gestemd ? local storage check
 let scored = localStorage.getItem("nps " + digitalData.page.program_name);
 if (scored) {
-    console.log("reeds NPS score gegeven")
+    console.log("reeds NPS score gegeven");
 } else {
    setnps();
 }
 
 function setnps(){
+console.log("setnps-start");
+
 // main element
 var nps = document.createElement('div'); 
 let header = document.createElement('h2');
@@ -128,7 +130,7 @@ buttons.forEach(button => {
         localStorage.setItem("nps " + digitalData.page.program_name , this.textContent);
     }
 }
-//spa functie gertriggerd door SPA custom event in Adobe launch
+//spa functie getriggerd door SPA custom event in Adobe launch
 function refreshNps(){
 console.log("refreshNps triggered");
 console.log("originalURL is " + originalURL);
@@ -138,7 +140,7 @@ if (refreshURL !== originalURL){
     console.log('urls not the same');
     document.querySelector('[id$="-description"] > div.nps-container').setAttribute("class", "hide");
 } else {
-    console.log('urls is the same');
+    console.log('urls are the same');
     // local storage check
     let scored = localStorage.getItem("nps " + digitalData.page.program_name);
     if (scored) {
