@@ -1,0 +1,1 @@
+_satellite.track(‘voteHitlist’,{interaction:‘vote success’,detail.interaction:artistName});
