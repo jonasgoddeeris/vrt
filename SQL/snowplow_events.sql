@@ -94,11 +94,7 @@ select
     offering_component_position,
     offering_component_subtitle,
     offering_component_title,
-    offering_component_type,
-    offering_dataplatform_calculation_id,
-    mediacontent_component_target_page_url,
-
-
+    offering_component_type,    
 
     custom__client_session_id,
     custom__client_session_first_event_id,
@@ -260,9 +256,7 @@ from (
             offering_component_position,
             offering_component_subtitle,
             offering_component_title,
-            offering_component_type,
-            offering_dataplatform_calculation_id,
-            mediacontent_component_target_page_url,       
+            offering_component_type,            
 
             -- contexts
             contactmoment_link_title,
