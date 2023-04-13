@@ -62,7 +62,8 @@
           "textCase": "{textCase.uppercase}",
           "textDecoration": "{textDecoration.none}"
         },
-        "type": "typography"
+        "type": "typography",
+        "description": "Labels voor metric cards"
       }
     },
     "brand": {
