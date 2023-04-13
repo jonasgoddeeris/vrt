@@ -32,7 +32,8 @@
           "textCase": "{textCase.none}",
           "textDecoration": "{textDecoration.none}"
         },
-        "type": "typography"
+        "type": "typography",
+        "description": "subtitels & grafiektitels"
       },
       "Body": {
         "value": {
@@ -46,7 +47,8 @@
           "textCase": "{textCase.none}",
           "textDecoration": "{textDecoration.none}"
         },
-        "type": "typography"
+        "type": "typography",
+        "description": "Alle overige tekst"
       },
       "Label": {
         "value": {
