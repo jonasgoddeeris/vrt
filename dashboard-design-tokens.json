@@ -93,7 +93,7 @@
         "type": "color"
       },
       "radio1": {
-        "value": "#0072BB",
+        "value": "#0072bb",
         "type": "color"
       },
       "één": {
@@ -115,6 +115,11 @@
       "Sporza-2": {
         "value": "#77ff07",
         "type": "color"
+      },
+      "radio-grouped": {
+        "value": "#3bc58f",
+        "type": "color",
+        "description": "grouped radio "
       }
     },
     "fontFamilies": {
