@@ -64,6 +64,11 @@
         },
         "type": "typography",
         "description": "Labels voor metric cards"
+      },
+      "White": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Background"
       }
     },
     "brand": {
@@ -75,7 +80,7 @@
         "value": "#5541f0",
         "type": "color"
       },
-      "SPORZA": {
+      "Sporza": {
         "value": "#1c1a24",
         "type": "color"
       },
