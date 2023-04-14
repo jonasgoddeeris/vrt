@@ -81,19 +81,19 @@
         "type": "color"
       },
       "Sporza": {
-        "value": "#1c1a24",
+        "value": "#161616",
         "type": "color"
       },
       "Ketnet": {
-        "value": "#1042df",
+        "value": "#1042e0",
         "type": "color"
       },
       "radio2": {
-        "value": "#079982",
+        "value": "#c42127",
         "type": "color"
       },
       "radio1": {
-        "value": "#0072bb",
+        "value": "#0072BB",
         "type": "color"
       },
       "één": {
@@ -112,7 +112,7 @@
         "value": "#000000",
         "type": "color"
       },
-      "sporza-sec": {
+      "Sporza-2": {
         "value": "#77ff07",
         "type": "color"
       }
