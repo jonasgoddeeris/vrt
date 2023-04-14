@@ -120,6 +120,10 @@
         "value": "#3bc58f",
         "type": "color",
         "description": "grouped radio "
+      },
+      "canvas": {
+        "value": "#ff6316",
+        "type": "color"
       }
     },
     "fontFamilies": {
