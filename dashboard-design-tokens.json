@@ -39,7 +39,7 @@
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
           "fontWeight": "{fontWeights.roobert-vrt-4}",
-          "lineHeight": "{lineHeights.1}",
+          "lineHeight": "{lineHeights.0}",
           "fontSize": "{fontSize.0}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
