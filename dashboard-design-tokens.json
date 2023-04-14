@@ -8,9 +8,9 @@
       "Header 1": {
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
-          "fontWeight": "{fontWeights.roobert-vrt-3}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.4}",
+          "fontSize": "{fontSize.22}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -23,9 +23,9 @@
       "Header 2": {
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
-          "fontWeight": "{fontWeights.roobert-vrt-3}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.1}",
-          "fontSize": "{fontSize.1}",
+          "fontSize": "{fontSize.12}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -38,9 +38,9 @@
       "Body": {
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
-          "fontWeight": "{fontWeights.roobert-vrt-4}",
+          "fontWeight": "{fontWeights.roobert-vrt-regular}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.0}",
+          "fontSize": "{fontSize.11}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -53,9 +53,9 @@
       "Label": {
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
-          "fontWeight": "{fontWeights.roobert-vrt-4}",
+          "fontWeight": "{fontWeights.roobert-vrt-regular}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.0}",
+          "fontSize": "{fontSize.11}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
