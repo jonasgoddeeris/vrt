@@ -116,7 +116,7 @@
         "value": "#77ff07",
         "type": "color"
       },
-      "radio-grouped": {
+      "radio": {
         "value": "#3bc58f",
         "type": "color",
         "description": "grouped radio "
