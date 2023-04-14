@@ -10,7 +10,7 @@
           "fontFamily": "{fontFamilies.roobert-vrt}",
           "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.4}",
+          "fontSize": "{fontSize.22}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -25,7 +25,7 @@
           "fontFamily": "{fontFamilies.roobert-vrt}",
           "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.1}",
-          "fontSize": "{fontSize.1}",
+          "fontSize": "{fontSize.12}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -40,7 +40,7 @@
           "fontFamily": "{fontFamilies.roobert-vrt}",
           "fontWeight": "{fontWeights.roobert-vrt-regular}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.0}",
+          "fontSize": "{fontSize.11}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -55,7 +55,7 @@
           "fontFamily": "{fontFamilies.roobert-vrt}",
           "fontWeight": "{fontWeights.roobert-vrt-medium}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.0}",
+          "fontSize": "{fontSize.11}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -153,36 +153,16 @@
       }
     },
     "fontSize": {
-      "0": {
+      "11": {
         "value": "11",
         "type": "fontSizes"
       },
-      "1": {
+      "12": {
         "value": "12",
         "type": "fontSizes"
       },
-      "2": {
-        "value": "15",
-        "type": "fontSizes"
-      },
-      "3": {
-        "value": "18",
-        "type": "fontSizes"
-      },
-      "4": {
+      "22": {
         "value": "22",
-        "type": "fontSizes"
-      },
-      "5": {
-        "value": "24",
-        "type": "fontSizes"
-      },
-      "6": {
-        "value": "45",
-        "type": "fontSizes"
-      },
-      "7": {
-        "value": "65",
         "type": "fontSizes"
       }
     },
