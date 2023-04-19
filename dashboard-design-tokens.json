@@ -10,7 +10,7 @@
           "fontFamily": "{fontFamilies.roobert-vrt}",
           "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.0}",
-          "fontSize": "{fontSize.22}",
+          "fontSize": "{fontSize.20}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.0}",
           "paragraphIndent": "{paragraphIndent.0}",
@@ -165,8 +165,8 @@
         "value": "12",
         "type": "fontSizes"
       },
-      "22": {
-        "value": "22",
+      "20": {
+        "value": "20",
         "type": "fontSizes"
       }
     },
