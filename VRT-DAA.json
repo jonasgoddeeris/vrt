@@ -49,16 +49,17 @@
         "title": {
             "color": "#031037",
             "fontSize": 11,
-            "fontFace": "wf_standard-font, arial, Roobert VRT"
+            "fontFace": "wf_standard-font, arial"
         },
         "header": {
             "color": "#031037",
-            "fontFace": "wf_standard-font, arial, Roobert VRT"
+            "fontFace": "'Roobert Semibold', wf_standard-font, arial",
+            "fontSize": 20
         },
         "callout": {
             "color": "#031037",
             "fontSize": 35,
-            "fontFace": "wf_standard-font, arial, Roobert VRT"
+            "fontFace": "'Roobert medium', wf_standard-font, arial"
         }
     },
     "visualStyles": {
