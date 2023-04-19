@@ -47,10 +47,17 @@
             "fontFace": "wf_standard-font, arial, sans-serif"
         },
         "title": {
+            "color": "#031037",
             "fontSize": 11,
             "fontFace": "wf_standard-font, arial, Roobert VRT"
         },
         "header": {
+            "color": "#031037",
+            "fontFace": "wf_standard-font, arial, Roobert VRT"
+        },
+        "callout": {
+            "color": "#031037",
+            "fontSize": 35,
             "fontFace": "wf_standard-font, arial, Roobert VRT"
         }
     },
