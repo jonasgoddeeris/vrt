@@ -1,0 +1,222 @@
+{
+  "global": {
+    "DAA": {
+      "Primary": {
+        "value": "#031037",
+        "type": "color"
+      },
+      "Header 1": {
+        "value": {
+          "fontFamily": "{fontFamilies.roobert-vrt}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
+          "lineHeight": "{lineHeights.0}",
+          "fontSize": "{fontSize.20}",
+          "letterSpacing": "{letterSpacing.0}",
+          "paragraphSpacing": "{paragraphSpacing.0}",
+          "paragraphIndent": "{paragraphIndent.0}",
+          "textCase": "{textCase.none}",
+          "textDecoration": "{textDecoration.none}"
+        },
+        "type": "typography",
+        "description": "dashboard titels"
+      },
+      "Header 2": {
+        "value": {
+          "fontFamily": "{fontFamilies.roobert-vrt}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
+          "lineHeight": "{lineHeights.1}",
+          "fontSize": "{fontSize.12}",
+          "letterSpacing": "{letterSpacing.0}",
+          "paragraphSpacing": "{paragraphSpacing.0}",
+          "paragraphIndent": "{paragraphIndent.0}",
+          "textCase": "{textCase.none}",
+          "textDecoration": "{textDecoration.none}"
+        },
+        "type": "typography",
+        "description": "subtitels & grafiektitels"
+      },
+      "Body": {
+        "value": {
+          "fontFamily": "{fontFamilies.roobert-vrt}",
+          "fontWeight": "{fontWeights.roobert-vrt-regular}",
+          "lineHeight": "{lineHeights.0}",
+          "fontSize": "{fontSize.11}",
+          "letterSpacing": "{letterSpacing.0}",
+          "paragraphSpacing": "{paragraphSpacing.0}",
+          "paragraphIndent": "{paragraphIndent.0}",
+          "textCase": "{textCase.none}",
+          "textDecoration": "{textDecoration.none}"
+        },
+        "type": "typography",
+        "description": "Alle overige tekst"
+      },
+      "Label": {
+        "value": {
+          "fontFamily": "{fontFamilies.roobert-vrt}",
+          "fontWeight": "{fontWeights.roobert-vrt-regular}",
+          "lineHeight": "{lineHeights.0}",
+          "fontSize": "{fontSize.11}",
+          "letterSpacing": "{letterSpacing.0}",
+          "paragraphSpacing": "{paragraphSpacing.0}",
+          "paragraphIndent": "{paragraphIndent.0}",
+          "textCase": "{textCase.uppercase}",
+          "textDecoration": "{textDecoration.none}"
+        },
+        "type": "typography",
+        "description": "Labels voor metric cards"
+      },
+      "White": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Background"
+      }
+    },
+    "brand": {
+      "VRT MAX": {
+        "value": "#fc4662",
+        "type": "color"
+      },
+      "VRT NWS": {
+        "value": "#5541f0",
+        "type": "color"
+      },
+      "sporza": {
+        "value": "#161616",
+        "type": "color"
+      },
+      "ketnet": {
+        "value": "#1042e0",
+        "type": "color"
+      },
+      "radio2": {
+        "value": "#c42127",
+        "type": "color"
+      },
+      "radio1": {
+        "value": "#0072bb",
+        "type": "color"
+      },
+      "één": {
+        "value": "#ff0095",
+        "type": "color"
+      },
+      "stubru": {
+        "value": "#e3e879",
+        "type": "color"
+      },
+      "mnm": {
+        "value": "#2c2a79",
+        "type": "color"
+      },
+      "klara": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "Sporza-2": {
+        "value": "#77ff07",
+        "type": "color"
+      },
+      "radio": {
+        "value": "#3bc58f",
+        "type": "color",
+        "description": "grouped radio "
+      },
+      "canvas": {
+        "value": "#ff6316",
+        "type": "color"
+      }
+    },
+    "fontFamilies": {
+      "roobert-vrt": {
+        "value": "Roobert VRT",
+        "type": "fontFamilies"
+      }
+    },
+    "lineHeights": {
+      "0": {
+        "value": "AUTO",
+        "type": "lineHeights"
+      },
+      "1": {
+        "value": "23",
+        "type": "lineHeights"
+      }
+    },
+    "fontWeights": {
+      "roobert-vrt-semibold": {
+        "value": "SemiBold",
+        "type": "fontWeights"
+      },
+      "roobert-vrt-regular": {
+        "value": "Regular",
+        "type": "fontWeights"
+      },
+      "roobert-vrt-medium": {
+        "value": "Medium",
+        "type": "fontWeights"
+      }
+    },
+    "fontSize": {
+      "11": {
+        "value": "11",
+        "type": "fontSizes"
+      },
+      "12": {
+        "value": "12",
+        "type": "fontSizes"
+      },
+      "20": {
+        "value": "20",
+        "type": "fontSizes"
+      }
+    },
+    "letterSpacing": {
+      "0": {
+        "value": "0%",
+        "type": "letterSpacing"
+      }
+    },
+    "paragraphSpacing": {
+      "0": {
+        "value": "0",
+        "type": "paragraphSpacing"
+      }
+    },
+    "textCase": {
+      "none": {
+        "value": "none",
+        "type": "textCase"
+      },
+      "capitalize": {
+        "value": "capitalize",
+        "type": "textCase"
+      },
+      "uppercase": {
+        "value": "uppercase",
+        "type": "textCase"
+      }
+    },
+    "textDecoration": {
+      "none": {
+        "value": "none",
+        "type": "textDecoration"
+      },
+      "underline": {
+        "value": "underline",
+        "type": "textDecoration"
+      }
+    },
+    "paragraphIndent": {
+      "0": {
+        "value": "0px",
+        "type": "dimension"
+      }
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "global"
+    ]
+  }
+}
