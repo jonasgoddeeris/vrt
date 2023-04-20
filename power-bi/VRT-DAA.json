@@ -47,6 +47,9 @@
     "minimum": "#0081FF",
     "center": "#FFBE32",
     "maximum": "#5541F0",
+    // "background":"#FFFFFF",
+    // "foreground": "#3A6108",
+    // "tableAccent": "#568410",
     "textClasses": {
         "label": {
             "fontSize": 11,
