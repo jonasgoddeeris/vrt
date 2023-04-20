@@ -119,12 +119,12 @@
                         },
                         "foreground": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#031037"
                             }
                         },
                         "border": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#031037"
                             }
                         }
                     }
