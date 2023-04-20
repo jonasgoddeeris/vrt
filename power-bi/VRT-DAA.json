@@ -159,7 +159,7 @@
                         "transparency": 0,
                         "foregroundColor": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#031037"
                             }
                         }
                     },
@@ -172,7 +172,7 @@
                         },
                         "foregroundColor": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#031037"
                             }
                         },
                         "transparency": 0
@@ -187,7 +187,7 @@
                         },
                         "foregroundColor": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#031037"
                             }
                         }
                     }
