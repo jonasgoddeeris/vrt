@@ -1,6 +1,13 @@
 ﻿{
     "name": "VRT DAA Theme",
     "dataColors": [
+        "#031037",
+        "#FF4944",
+        "#3ECF6E",
+        "#5541F0",
+        "#AA3CE9",
+        "#FFBE32",
+        "#0081FF",
         "#0081FF",
         "#00BEAA",
         "#FFBE32",
@@ -42,22 +49,18 @@
     "maximum": "#5541F0",
     "textClasses": {
         "label": {
-            "color": "#031037",
             "fontSize": 11,
             "fontFace": "wf_standard-font, arial, sans-serif"
         },
         "title": {
-            "color": "#031037",
             "fontSize": 11,
             "fontFace": "wf_standard-font, arial"
         },
         "header": {
-            "color": "#031037",
             "fontFace": "'Roobert Semibold', wf_standard-font, arial",
             "fontSize": 20
         },
         "callout": {
-            "color": "#031037",
             "fontSize": 35,
             "fontFace": "'Roobert medium', wf_standard-font, arial"
         }
