@@ -201,7 +201,20 @@
                   "alignment": "center",
                   "fontSize": 12
                 }
-              ]
+              ],
+                "dropShadow": [
+                  {
+                    "shadowBlur": 8,
+                    "angle": 8,
+                    "shadowDistance": 8,
+                    "preset": "BottomLeft",
+                    "position": "Outer",
+                    "show": true,
+                    "shadowSpread": 8,
+                    "transparency": 20
+                  }
+                ]
+              }
             }
           },
           "*": {
