@@ -92,7 +92,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#252C40"
+                                "color": "#FFFFFF"
                             }
                         },
                         "transparency": 0
@@ -102,7 +102,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#252C40"
+                                "color": "#FFFFFF"
                             }
                         },
                         "show": false,
@@ -114,17 +114,17 @@
                         "transparency": 0,
                         "background": {
                             "solid": {
-                                "color": "#252C40"
+                                "color": "#FFFFFF"
                             }
                         },
                         "foreground": {
                             "solid": {
-                                "color": "#B4BAC3"
+                                "color": "#FFFFFF"
                             }
                         },
                         "border": {
                             "solid": {
-                                "color": "#252C40"
+                                "color": "#FFFFFF"
                             }
                         }
                     }
@@ -143,7 +143,7 @@
                         },
                         "background": {
                             "solid": {
-                                "color": "#252C40"
+                                "color": "#FFFFFF"
                             }
                         }
                     }
@@ -172,7 +172,7 @@
                         },
                         "foregroundColor": {
                             "solid": {
-                                "color": "#252423"
+                                "color": "#FFFFFF"
                             }
                         },
                         "transparency": 0
@@ -187,7 +187,7 @@
                         },
                         "foregroundColor": {
                             "solid": {
-                                "color": "#252423"
+                                "color": "#FFFFFF"
                             }
                         }
                     }
@@ -200,7 +200,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#141A2D"
+                                "color": "#FFFFFF"
                             }
                         },
                         "transparency": 0
