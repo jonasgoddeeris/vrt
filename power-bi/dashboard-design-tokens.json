@@ -69,11 +69,35 @@
         "value": "#ffffff",
         "type": "color",
         "description": "Background"
+      },
+      "bad": {
+        "value": "#E62323",
+        "type": "color"
+      },
+      "neutral": {
+        "value": "#C1C1C6",
+        "type": "color"
+      },
+      "minimum": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "center": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "maximum": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "good": {
+        "value": "#21891f",
+        "type": "color"
       }
     },
     "brand": {
       "VRT MAX": {
-        "value": "#fc4662",
+        "value": "#ff4942",
         "type": "color"
       },
       "VRT NWS": {
