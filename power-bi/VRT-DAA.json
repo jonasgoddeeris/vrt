@@ -92,7 +92,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#F9F9F9"
                             }
                         },
                         "transparency": 0
@@ -257,7 +257,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#F9F9F9"
                             }
                         },
                         "transparency": 0
