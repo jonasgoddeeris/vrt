@@ -58,11 +58,11 @@
     "textClasses": {
         "label": {
             "fontSize": 11,
-            "fontFace": "wf_standard-font, arial, sans-serif"
+            "fontFace": "'Roobert Semibold', wf_standard-font, arial"
         },
         "title": {
             "fontSize": 11,
-            "fontFace": "wf_standard-font, arial"
+            "fontFace": "'Roobert VRT','Roobert Semibold','Roobert','wf_standard-font','arial'"
         },
         "header": {
             "fontFace": "'Roobert Semibold', wf_standard-font, arial",
