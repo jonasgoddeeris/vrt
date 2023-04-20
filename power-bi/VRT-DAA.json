@@ -218,7 +218,7 @@
             "*": {
                 "*": [
                     {
-                        "fontSize": 26,
+                        "fontSize": 20,
                         "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
                         "wordWrap": true,
                         "color": {
