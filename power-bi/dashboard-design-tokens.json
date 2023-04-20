@@ -71,11 +71,11 @@
         "description": "Background"
       },
       "bad": {
-        "value": "#E62323",
+        "value": "#e62323",
         "type": "color"
       },
       "neutral": {
-        "value": "#C1C1C6",
+        "value": "#c1c1c6",
         "type": "color"
       },
       "minimum": {
@@ -92,6 +92,10 @@
       },
       "good": {
         "value": "#21891f",
+        "type": "color"
+      },
+      "background": {
+        "value": "#f9f9f9",
         "type": "color"
       }
     },
