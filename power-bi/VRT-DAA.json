@@ -193,7 +193,27 @@
                     }
                 ]
             }
-        },
+        },"card": {
+            "*": {
+              "title": [
+                {
+                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                  "alignment": "center",
+                  "fontSize": 12
+                }
+              ]
+            }
+          },
+          "*": {
+            "*": {
+              "text": [
+                {
+                  "fontSize": 13,
+                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'"
+                }
+              ]
+            }
+          }
         "textbox": {
             "*": {
                 "*": [
