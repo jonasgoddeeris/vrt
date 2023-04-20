@@ -199,13 +199,13 @@
               "dropShadow": [
                 {
                   "shadowBlur": 8,
-                  "angle": 8,
+                  "angle": 12,
                   "shadowDistance": 8,
                   "preset": "BottomLeft",
                   "position": "Outer",
                   "show": true,
-                  "shadowSpread": 8,
-                  "transparency": 20
+                  "shadowSpread": 16,
+                  "transparency": 80
                 }
               ],
               "title": [
