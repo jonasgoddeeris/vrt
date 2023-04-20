@@ -194,6 +194,44 @@
                 ]
             }
         },
+        "textbox": {
+            "*": {
+                "*": [
+                    {
+                        "fontSize": "26",
+                        "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                        "color": "#031037",
+                        "wordWrap": true,
+                        "color": {
+                            "solid": {
+                                "color": "#031037"
+                            }
+                        }
+                    }
+                ],
+                "general": [
+                    {
+                        "responsive": true
+                    }
+                ],
+                "background": [
+                    {
+                        "show": false,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "visualHeader": [
+                    {
+                        "show": false
+                    }
+                ]
+            }
+        },
         "page": {
             "*": {
                 "background": [
