@@ -198,14 +198,14 @@
             "*": {
               "dropShadow": [
                 {
-                  "shadowBlur": 16,
+                  "shadowBlur": 1,
                   "angle": 12,
-                  "shadowDistance": 4,
-                  "preset": "BottomLeft",
+                  "shadowDistance": 2,
+                  "preset": "BottomRight",
                   "position": "Outer",
                   "show": true,
                   "shadowSpread": 16,
-                  "transparency": 90
+                  "transparency": 10
                 }
               ],
               "title": [
