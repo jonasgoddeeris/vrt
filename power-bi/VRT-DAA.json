@@ -85,6 +85,137 @@
                     }
                 ]
             }
+        },
+        "*": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#252C40"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "border": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#252C40"
+                            }
+                        },
+                        "show": false,
+                        "radius": 4
+                    }
+                ],
+                "visualHeader": [
+                    {
+                        "transparency": 0,
+                        "background": {
+                            "solid": {
+                                "color": "#252C40"
+                            }
+                        },
+                        "foreground": {
+                            "solid": {
+                                "color": "#B4BAC3"
+                            }
+                        },
+                        "border": {
+                            "solid": {
+                                "color": "#252C40"
+                            }
+                        }
+                    }
+                ],
+                "visualTooltip": [
+                    {
+                        "titleFontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "valueFontColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "background": {
+                            "solid": {
+                                "color": "#252C40"
+                            }
+                        }
+                    }
+                ],
+                "filterCard": [
+                    {
+                        "$id": "Applied",
+                        "backgroundColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 0,
+                        "foregroundColor": {
+                            "solid": {
+                                "color": "#252423"
+                            }
+                        }
+                    },
+                    {
+                        "$id": "Available",
+                        "backgroundColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "foregroundColor": {
+                            "solid": {
+                                "color": "#252423"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "outspacePane": [
+                    {
+                        "backgroundColor": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "foregroundColor": {
+                            "solid": {
+                                "color": "#252423"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#141A2D"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "outspace": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ]
+            }
         }
     }
 }
