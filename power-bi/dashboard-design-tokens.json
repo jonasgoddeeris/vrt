@@ -71,7 +71,7 @@
         "description": "Background"
       },
       "bad": {
-        "value": "#FF4944",
+        "value": "#ff4944",
         "type": "color"
       },
       "neutral": {
@@ -91,11 +91,11 @@
         "type": "color"
       },
       "good": {
-        "value": "#3ECF6E",
+        "value": "#3ecf6e",
         "type": "color"
       },
       "background": {
-        "value": "#FFFBFC",
+        "value": "#f7f9fd",
         "type": "color"
       },
       "kpi": {
