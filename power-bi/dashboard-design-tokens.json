@@ -97,6 +97,20 @@
       "background": {
         "value": "#FFFBFC",
         "type": "color"
+      },
+      "kpi": {
+        "value": {
+          "fontFamily": "{fontFamilies.roobert-vrt}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
+          "lineHeight": "{lineHeights.0}",
+          "fontSize": "{fontSize.30}",
+          "letterSpacing": "{letterSpacing.0}",
+          "paragraphSpacing": "{paragraphSpacing.0}",
+          "paragraphIndent": "{paragraphIndent.0}",
+          "textCase": "{textCase.none}",
+          "textDecoration": "{textDecoration.none}"
+        },
+        "type": "typography"
       }
     },
     "brand": {
@@ -195,6 +209,10 @@
       },
       "20": {
         "value": "20",
+        "type": "fontSizes"
+      },
+      "30": {
+        "value": "30",
         "type": "fontSizes"
       }
     },
