@@ -53,7 +53,7 @@
       "Label": {
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
-          "fontWeight": "{fontWeights.roobert-vrt-regular}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.0}",
           "fontSize": "{fontSize.11}",
           "letterSpacing": "{letterSpacing.0}",
