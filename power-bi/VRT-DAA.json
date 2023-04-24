@@ -207,13 +207,9 @@
                 {
                     "color": {
                         "solid": {
-                          "color": {
-                            "solid": {
                               "color": "#f7f9fd"
                           },
                           }
-                        }
-                      },
                   "show": true
                 }
               ],
@@ -229,7 +225,6 @@
                 {
                   "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
                   "fontColor": {
-                    "solid": {
                         "color": {
                           "solid": {
                             "color": "#031037"
@@ -237,7 +232,6 @@
                         }
                       }
                   }
-                }
               ]
             }
           },
