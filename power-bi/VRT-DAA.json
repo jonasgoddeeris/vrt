@@ -102,7 +102,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#FFFFFF"
+                                "color": "#031037"
                             }
                         },
                         "show": false,
@@ -202,36 +202,6 @@
                   "alignment": "center",
                   "fontSize": 12
                 }
-              ],
-              "background": [
-                {
-                    "color": {
-                        "solid": {
-                              "color": "#f7f9fd"
-                          },
-                          }
-                  "show": true
-                }
-              ],
-              "padding": [
-                {
-                  "bottom": 12,
-                  "top": 12,
-                  "left": 16,
-                  "right": 16
-                }
-              ],
-              "title": [
-                {
-                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
-                  "fontColor": {
-                        "color": {
-                          "solid": {
-                            "color": "#031037"
-                        },
-                        }
-                      }
-                  }
               ]
             }
           },
