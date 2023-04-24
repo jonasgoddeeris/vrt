@@ -102,7 +102,7 @@
                     {
                         "color": {
                             "solid": {
-                                "color": "#031037"
+                                "color": "#FFFFFF"
                             }
                         },
                         "show": false,
@@ -201,6 +201,62 @@
                   "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
                   "alignment": "center",
                   "fontSize": 12
+                }
+              ],        "background": [
+                {
+                  "color": {
+                    "solid": {
+                      "color": {
+                        "expr": {
+                          "ThemeDataColor": {
+                            "ColorId": 2,
+                            "Percent": 0
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "show": true
+                }
+              ],
+              "border": [
+                {
+                  "color": {
+                    "solid": {
+                      "color": {
+                        "solid": {
+                          "color": "#f7f9fd"
+                      },
+                      }
+                    }
+                  },
+                  "radius": 20,
+                  "show": true
+                }
+              ],
+              "padding": [
+                {
+                  "bottom": 12,
+                  "top": 12,
+                  "left": 16,
+                  "right": 16
+                }
+              ],
+              "title": [
+                {
+                  "fontFamily": "DIN",
+                  "fontColor": {
+                    "solid": {
+                      "color": {
+                        "expr": {
+                          "ThemeDataColor": {
+                            "ColorId": 1,
+                            "Percent": 0
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               ]
             }
