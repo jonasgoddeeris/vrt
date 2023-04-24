@@ -202,7 +202,27 @@
                   "alignment": "center",
                   "fontSize": 12
                 }
-              ]
+              ],"background": [
+                {
+                    "color": {
+                        "solid": {
+                            "color": "#f7f9fd"
+                        }
+                    },
+                    "transparency": 0
+                }
+            ],
+              "border": [
+                {
+                    "color": {
+                        "solid": {
+                            "color": "#f7f9fd"
+                        }
+                    },
+                    "show": true,
+                    "radius": 20
+                }
+            ]
             }
           },
         "textbox": {
