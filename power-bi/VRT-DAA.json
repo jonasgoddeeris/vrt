@@ -202,20 +202,18 @@
                   "alignment": "center",
                   "fontSize": 12
                 }
-              ],        "background": [
+              ],
+              "background": [
                 {
-                  "color": {
-                    "solid": {
-                      "color": {
-                        "expr": {
-                          "ThemeDataColor": {
-                            "ColorId": 2,
-                            "Percent": 0
+                    "color": {
+                        "solid": {
+                          "color": {
+                            "solid": {
+                              "color": "#f7f9fd"
+                          },
                           }
                         }
-                      }
-                    }
-                  },
+                      },
                   "show": true
                 }
               ],
@@ -244,18 +242,15 @@
               ],
               "title": [
                 {
-                  "fontFamily": "DIN",
+                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
                   "fontColor": {
                     "solid": {
-                      "color": {
-                        "expr": {
-                          "ThemeDataColor": {
-                            "ColorId": 1,
-                            "Percent": 0
-                          }
+                        "color": {
+                          "solid": {
+                            "color": "#031037"
+                        },
                         }
                       }
-                    }
                   }
                 }
               ]
