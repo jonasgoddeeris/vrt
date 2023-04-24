@@ -53,7 +53,7 @@
       "Label": {
         "value": {
           "fontFamily": "{fontFamilies.roobert-vrt}",
-          "fontWeight": "{fontWeights.roobert-vrt-regular}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
           "lineHeight": "{lineHeights.0}",
           "fontSize": "{fontSize.11}",
           "letterSpacing": "{letterSpacing.0}",
@@ -71,7 +71,7 @@
         "description": "Background"
       },
       "bad": {
-        "value": "#FF4944",
+        "value": "#ff4944",
         "type": "color"
       },
       "neutral": {
@@ -91,12 +91,26 @@
         "type": "color"
       },
       "good": {
-        "value": "#3ECF6E",
+        "value": "#3ecf6e",
         "type": "color"
       },
       "background": {
-        "value": "#FFFBFC",
+        "value": "#f7f9fd",
         "type": "color"
+      },
+      "kpi": {
+        "value": {
+          "fontFamily": "{fontFamilies.roobert-vrt}",
+          "fontWeight": "{fontWeights.roobert-vrt-semibold}",
+          "lineHeight": "{lineHeights.0}",
+          "fontSize": "{fontSize.30}",
+          "letterSpacing": "{letterSpacing.0}",
+          "paragraphSpacing": "{paragraphSpacing.0}",
+          "paragraphIndent": "{paragraphIndent.0}",
+          "textCase": "{textCase.none}",
+          "textDecoration": "{textDecoration.none}"
+        },
+        "type": "typography"
       }
     },
     "brand": {
@@ -195,6 +209,10 @@
       },
       "20": {
         "value": "20",
+        "type": "fontSizes"
+      },
+      "30": {
+        "value": "30",
         "type": "fontSizes"
       }
     },
