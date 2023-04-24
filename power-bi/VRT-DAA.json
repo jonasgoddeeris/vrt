@@ -202,7 +202,14 @@
                   "alignment": "center",
                   "fontSize": 12
                 }
-              ],"background": [
+              ],
+              "labels": [
+                {
+                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                  "fontSize": 30
+                }
+              ],
+              "background": [
                 {
                     "color": {
                         "solid": {
