@@ -217,21 +217,6 @@
                   "show": true
                 }
               ],
-              "border": [
-                {
-                  "color": {
-                    "solid": {
-                      "color": {
-                        "solid": {
-                          "color": "#f7f9fd"
-                      },
-                      }
-                    }
-                  },
-                  "radius": 20,
-                  "show": true
-                }
-              ],
               "padding": [
                 {
                   "bottom": 12,
