@@ -196,18 +196,6 @@
         },
         "card": {
             "*": {
-              "dropShadow": [
-                {
-                  "shadowBlur": 1,
-                  "angle": 12,
-                  "shadowDistance": 2,
-                  "preset": "BottomRight",
-                  "position": "Outer",
-                  "show": true,
-                  "shadowSpread": 16,
-                  "transparency": 10
-                }
-              ],
               "title": [
                 {
                   "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
