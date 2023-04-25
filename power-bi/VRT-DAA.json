@@ -201,14 +201,14 @@
             "*": {
               "title": [
                 {
-                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                  "fontFamily": "'Roobert medium','Roobert VRT','Roobert'",
                   "alignment": "center",
                   "fontSize": 11
                 }
               ],
               "labels": [
                 {
-                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                  "fontFamily": "'Roobert medium','Roobert VRT','Roobert'",
                     "color": {
                     "solid": {
                       "color": "#031037"
@@ -245,7 +245,7 @@
                 "*": [
                     {
                         "fontSize": 20,
-                        "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                        "fontFamily": "'Roobert medium','Roobert VRT','Roobert'",
                         "wordWrap": true,
                         "color": {
                             "solid": {
