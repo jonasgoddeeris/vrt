@@ -84,7 +84,8 @@
                     {
                         "fontSize": 11,
                         "fontFamily": "'Roobert VRT','Roobert', arial, sans-serif",
-                        "color": "#031037"
+                        "color": "#031037",
+                        "fontWeight": "SemiBold"
                     }
                 ]
             }
