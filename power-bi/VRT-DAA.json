@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "VRT DAA Theme",
     "dataColors": [
         "#031037",
@@ -58,19 +58,23 @@
     "textClasses": {
         "label": {
             "fontSize": 11,
-            "fontFace": "'Roobert VRT','Roobert',wf_standard-font,arial"
+            "fontFace": "'Roobert VRT','Roobert',arial, sans-serif",
+            "color": "#031037"
         },
         "title": {
             "fontSize": 11,
-            "fontFace": "'Roobert Semibold', arial"
+            "fontFace": "'Roobert Semibold','Roobert VRT','Roobert', arial, sans-serif",
+            "color": "#031037"
         },
         "header": {
-            "fontFace": "'Roobert Semibold', wf_standard-font, arial",
-            "fontSize": 20
+            "fontFace": "'Roobert Semibold','Roobert VRT','Roobert', arial, sans-serif",
+            "fontSize": 20,
+            "color": "#031037"
         },
         "callout": {
             "fontSize": 30,
-            "fontFace": "'Roobert medium', wf_standard-font, arial"
+            "fontFace": "'Roobert medium','Roobert VRT','Roobert', arial, sans-serif",
+            "color": "#031037"
         }
     },
     "visualStyles": {
@@ -78,8 +82,8 @@
             "*": {
                 "*": [
                     {
-                        "fontSize": 12,
-                        "fontFamily": "'Roobert VRT','Roobert Semibold','Roobert'",
+                        "fontSize": 11,
+                        "fontFamily": "'Roobert VRT','Roobert', arial, sans-serif",
                         "color": "#031037",
                         "fontWeight": "SemiBold"
                     }
@@ -206,6 +210,11 @@
               "labels": [
                 {
                   "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                    "color": {
+                    "solid": {
+                      "color": "#031037"
+                    }
+                  },
                   "fontSize": 30
                 }
               ],
