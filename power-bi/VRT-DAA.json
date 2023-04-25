@@ -63,16 +63,16 @@
         },
         "title": {
             "fontSize": 11,
-            "fontFace": "'Roobert medium','Roobert VRT','Roobert', arial, sans-serif",
+            "fontFace": "'Roobert Semibold','Roobert VRT','Roobert', arial, sans-serif",
             "color": "#031037"
         },
         "header": {
-            "fontFace": "'Roobert medium','Roobert VRT','Roobert', arial, sans-serif",
+            "fontFace": "'Roobert Semibold','Roobert VRT','Roobert', arial, sans-serif",
             "fontSize": 20,
             "color": "#031037"
         },
         "callout": {
-            "fontSize": 20,
+            "fontSize": 30,
             "fontFace": "'Roobert medium','Roobert VRT','Roobert', arial, sans-serif",
             "color": "#031037"
         }
