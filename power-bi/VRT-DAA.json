@@ -6,7 +6,7 @@
         "#3ECF6E",
         "#5541F0",
         "#AA3CE9",
-        "#FFBE32",
+        "#FFBE32",x
         "#0081FF",
         "#0081FF",
         "#00BEAA",
@@ -204,7 +204,7 @@
                 {
                   "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
                   "alignment": "center",
-                  "fontSize": 12
+                  "fontSize": 11
                 }
               ],
               "labels": [
