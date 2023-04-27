@@ -284,19 +284,23 @@
         "type": "color"
       },
       "color7": {
-        "value": "#d9d9d9",
+        "value": "#0081FF",
         "type": "color"
       },
       "color8": {
-        "value": "#d9d9d9",
+        "value": "#00BEAA",
         "type": "color"
       },
       "color9": {
-        "value": "#d9d9d9",
+        "value": "#FF3C78",
         "type": "color"
       },
       "color10": {
-        "value": "#d9d9d9",
+        "value": "#3599B8",
+        "type": "color"
+      },
+      "color11": {
+        "value": "#706060",
         "type": "color"
       }
     }
