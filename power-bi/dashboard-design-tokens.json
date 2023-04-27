@@ -328,15 +328,15 @@
     },
     "content": {
       "live": {
-        "value": "#d9d9d9",
+        "value": "#3bc58f",
         "type": "color"
       },
       "aod": {
-        "value": "#d9d9d9",
+        "value": "#031037",
         "type": "color"
       },
       "vod": {
-        "value": "#d9d9d9",
+        "value": "#fc4662",
         "type": "color"
       }
     }
