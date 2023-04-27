@@ -257,6 +257,48 @@
         "value": "0px",
         "type": "dimension"
       }
+    },
+    "data": {
+      "color1": {
+        "value": "#031037",
+        "type": "color"
+      },
+      "color2": {
+        "value": "#8547e8",
+        "type": "color"
+      },
+      "color3": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color4": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color5": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color10": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color9": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color8": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color7": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "color6": {
+        "value": "#d9d9d9",
+        "type": "color"
+      }
     }
   },
   "$themes": [],
