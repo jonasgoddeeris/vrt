@@ -272,11 +272,11 @@
         "type": "color"
       },
       "color4": {
-        "value": "#ff4944",
+        "value": "#fc4662",
         "type": "color"
       },
       "color5": {
-        "value": "#3ECF6E",
+        "value": "#3bc58f",
         "type": "color"
       },
       "color6": {
@@ -301,6 +301,42 @@
       },
       "color11": {
         "value": "#706060",
+        "type": "color"
+      }
+    },
+    "plat": {
+      "web": {
+        "value": "#fc4662",
+        "type": "color"
+      },
+      "app": {
+        "value": "#031037",
+        "type": "color"
+      },
+      "tv app": {
+        "value": "#3bc58f",
+        "type": "color"
+      },
+      "car": {
+        "value": "#5541f0",
+        "type": "color"
+      },
+      "chromecast": {
+        "value": "#ffbe32",
+        "type": "color"
+      }
+    },
+    "content": {
+      "live": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "aod": {
+        "value": "#d9d9d9",
+        "type": "color"
+      },
+      "vod": {
+        "value": "#d9d9d9",
         "type": "color"
       }
     }
