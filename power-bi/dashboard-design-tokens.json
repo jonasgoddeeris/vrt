@@ -331,12 +331,8 @@
         "value": "#3bc58f",
         "type": "color"
       },
-      "aod": {
+      "ondemand": {
         "value": "#031037",
-        "type": "color"
-      },
-      "vod": {
-        "value": "#fc4662",
         "type": "color"
       }
     }
