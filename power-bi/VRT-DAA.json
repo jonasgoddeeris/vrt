@@ -34,12 +34,12 @@
         },
         "title": {
             "fontSize": 11,
-            "fontFace": "'Roobert Semibold','Roobert VRT','Roobert', arial, sans-serif",
+            "fontFace": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert', arial, sans-serif",
             "color": "#031037"
         },
         "header": {
-            "fontFace": "'Roobert Semibold','Roobert VRT','Roobert', arial, sans-serif",
-            "fontSize": 20,
+            "fontFace": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert', arial, sans-serif",
+            "fontSize": 16,
             "color": "#031037"
         },
         "callout": {
@@ -172,14 +172,14 @@
             "*": {
               "title": [
                 {
-                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                  "fontFamily": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert'",
                   "alignment": "center",
                   "fontSize": 11
                 }
               ],
               "labels": [
                 {
-                  "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                  "fontFamily": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert'",
                     "color": {
                     "solid": {
                       "color": "#031037"
@@ -216,7 +216,7 @@
                 "*": [
                     {
                         "fontSize": 9,
-                        "fontFamily": "'Roobert Semibold','Roobert VRT','Roobert'",
+                        "fontFamily": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert'",
                         "wordWrap": true,
                         "color": {
                             "solid": {
