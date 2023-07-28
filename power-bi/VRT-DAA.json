@@ -28,22 +28,22 @@
     "fourthLevelElements": "#031037",
     "textClasses": {
         "label": {
-            "fontSize": 11,
+            "fontSize": 8,
             "fontFace": "'Roobert VRT','Roobert',arial, sans-serif",
             "color": "#031037"
         },
         "title": {
-            "fontSize": 11,
+            "fontSize": 9,
             "fontFace": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert', arial, sans-serif",
             "color": "#031037"
         },
         "header": {
             "fontFace": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert', arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 14,
             "color": "#031037"
         },
         "callout": {
-            "fontSize": 30,
+            "fontSize": 23,
             "fontFace": "'Roobert medium','Roobert VRT','Roobert', arial, sans-serif",
             "color": "#031037"
         }
@@ -174,7 +174,7 @@
                 {
                   "fontFamily": "'Roobert Semibold','Roobert VRT Semibold','Roobert VRT','Roobert'",
                   "alignment": "center",
-                  "fontSize": 11
+                  "fontSize": 9
                 }
               ],
               "labels": [
@@ -185,7 +185,7 @@
                       "color": "#031037"
                     }
                   },
-                  "fontSize": 30
+                  "fontSize": 23
                 }
               ],
               "background": [
