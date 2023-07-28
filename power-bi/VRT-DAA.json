@@ -53,7 +53,7 @@
             "*": {
                 "*": [
                     {
-                        "fontSize": 11,
+                        "fontSize": 8,
                         "fontFamily": "'Roobert VRT','Roobert', arial, sans-serif",
                         "color": "#031037"
                     }
@@ -192,7 +192,7 @@
                 {
                     "color": {
                         "solid": {
-                            "color": "#f7f9fd"
+                            "color": "#F0F4FB"
                         }
                     },
                     "transparency": 0
@@ -202,7 +202,7 @@
                 {
                     "color": {
                         "solid": {
-                            "color": "#f7f9fd"
+                            "color": "#F0F4FB"
                         }
                     },
                     "show": true,
