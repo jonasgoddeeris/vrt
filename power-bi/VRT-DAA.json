@@ -241,6 +241,11 @@
                         "transparency": 100
                     }
                 ],
+                "padding": [
+                    {
+                        "top": 12
+                    }
+                ],
                 "visualHeader": [
                     {
                         "show": false
