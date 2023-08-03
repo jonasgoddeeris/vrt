@@ -270,6 +270,28 @@
                     }
                 ]
             }
+        },
+        "shape": {
+            "*": {
+              "background": [
+                {
+                  "show": false
+                }
+              ],
+              "fill": [
+                {
+                  "show": true
+                },
+                {
+                  "$id": "default",
+                  "transparency": 0,
+                  "fillColor": {
+                    "solid": {
+                      "color": "#F0F4FB"
+                    }
+                  }
+                } ]
+            }
         }
     }
 }
